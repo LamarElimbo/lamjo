@@ -1,0 +1,239 @@
+{% extends "_skeleton_template.html" %}
+{% block title %}Lamar's Web Apps - Scory Story 2.0{% endblock %}
+{% block content %}
+
+<div class="info-pulse"></div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-11 col-md-12">
+            <div id='resultPhone'>
+                
+                <audio loop src='../../static/scory_story_v2_static/songs/digital_witchcraft_fingerpaint.mp3' id='peacefulSong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/nicki_minaj_beez_in_the_trap.mp3' id='darkSong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/massive_attack_teardrop.mp3' id='lonelySong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/melanie_martinez_mrs_potato_head.mp3' id='sadnessSong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/tchaikovsky_waltz_flowers.mp3' id='romanticSong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/grimes_oblivion.mp3' id='flirtatiousSong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/garbage_cherry_lips.mp3' id='confidenceSong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/massive_attack_inertia_creeps.mp3' id='predatorySong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/trent_reznor_atticus_ross_in_motion.mp3' id='flightSong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/britney_spears_womanizer.mp3' id='exerciseSong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/three_days_grace_i_hate_everything_about_you.mp3' id='fightSong'></audio>
+                <audio loop src='../../static/scory_story_v2_static/songs/the_hives_tick_tick_boom.mp3' id='celebratorySong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/breaking_benjamin_diary_of_jane.mp3' id='chaoticSong'></audio>    
+                <audio loop src='../../static/scory_story_v2_static/songs/blur_song_2.mp3' id='mischievousSong'></audio>    
+
+                <div id='paragraphPointer'></div>
+                <div id='mobile'><img src="../../static/scory_story_v2_static/images/phone.png">
+                    <div id="mobileBox2">
+                        <div id='resultStory' onscroll='myFunction()'>
+                            {% set paragraphNumber = 0 %}
+                            {% for paragraph in paragraphs %}
+                                <p id="p{{paragraphNumber}}" style="font-size: 20px;">{{paragraph}}</p>
+                                {% set paragraphNumber = paragraphNumber + 1 %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <button id='refreshButton'><a href="scory_story_v2" style="color:white;">Refresh</a></button>
+                </div>
+            </div>
+            <div class='colourBoxC1' id='peacefulBox' style='background-color: #E74C3C; border-color: #943126;'>peaceful</div>
+            <div class='colourBoxC1' id='darkBox' style='background-color: #F1948A; border-color: #943126;'>dark</div>
+            <div class='colourBoxC1' id='lonelyBox' style='background-color: #8E44AD; border-color: #5B2C6F;'>lonely</div>
+            <div class='colourBoxC1' id='sadnessBox' style='background-color: #BB8FCE; border-color: #5B2C6F;'>sadness</div>
+            <div class='colourBoxC1' id='romanticBox' style='background-color: #2980B9; border-color: #1A5276;'>romantic</div>
+            <div class='colourBoxC1' id='flirtatiousBox' style='background-color: #5499C7; border-color: #1A5276;'>flirtatious</div>
+            <div class='colourBoxC1' id='confidenceBox' style='background-color: #7FB3D5; border-color: #1A5276;'>confidence</div>
+            <div class='colourBoxC1' id='predatoryBox' style='background-color: #1ABC9C; border-color: #117864;'>predatory</div>
+            <div class='colourBoxC1' id='flightBox' style='background-color: #76D7C4; border-color: #117864;'>flight</div>
+            <div class='colourBoxC1' id='exerciseBox' style='background-color: #F1C40F; border-color: #9A7D0A;'>exercise</div>
+            <div class='colourBoxC1' id='fightBox' style='background-color: #F7DC6F; border-color: #9A7D0A;'>fight</div>
+            <div class='colourBoxC1' id='celebratoryBox' style='background-color: #D35400; border-color: #873600;'>celebratory</div>
+            <div class='colourBoxC1' id='chaoticBox' style='background-color: #DC7633; border-color: #873600;'>chaotic</div>
+            <div class='colourBoxC1' id='mischievousBox' style='background-color: #E59866; border-color: #873600;'>mischievous</div>
+
+            <div class='colourBoxPointerC1' id='peaceful'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='dark'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='lonely'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='sadness'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='romantic'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='flirtatious'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='confidence'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='predatory'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='flight'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='exercise'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='fight'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='celebratory'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='chaotic'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+            <div class='colourBoxPointerC1' id='mischievous'><img src="../../static/scory_story_v2_static/images/leftArrow.png"></div>
+
+            <div class='colourBoxC2' id='peacefulBoxC2' style='background-color: #E74C3C; border-color: #943126;'>peaceful</div>
+            <div class='colourBoxC2' id='darkBoxC2' style='background-color: #F1948A; border-color: #943126;'>dark</div>
+            <div class='colourBoxC2' id='lonelyBoxC2' style='background-color: #8E44AD; border-color: #5B2C6F;'>lonely</div>
+            <div class='colourBoxC2' id='sadnessBoxC2' style='background-color: #BB8FCE; border-color: #5B2C6F;'>sadness</div>
+            <div class='colourBoxC2' id='romanticBoxC2' style='background-color: #2980B9; border-color: #1A5276;'>romantic</div>
+            <div class='colourBoxC2' id='flirtatiousBoxC2' style='background-color: #5499C7; border-color: #1A5276;'>flirtatious</div>
+            <div class='colourBoxC2' id='confidenceBoxC2' style='background-color: #7FB3D5; border-color: #1A5276;'>confidence</div>
+            <div class='colourBoxC2' id='predatoryBoxC2' style='background-color: #1ABC9C; border-color: #117864;'>predatory</div>
+            <div class='colourBoxC2' id='flightBoxC2' style='background-color: #76D7C4; border-color: #117864;'>flight</div>
+            <div class='colourBoxC2' id='exerciseBoxC2' style='background-color: #F1C40F; border-color: #9A7D0A;'>exercise</div>
+            <div class='colourBoxC2' id='fightBoxC2' style='background-color: #F7DC6F; border-color: #9A7D0A;'>fight</div>
+            <div class='colourBoxC2' id='celebratoryBoxC2' style='background-color: #D35400; border-color: #873600;'>celebratory</div>
+            <div class='colourBoxC2' id='chaoticBoxC2' style='background-color: #DC7633; border-color: #873600;'>chaotic</div>
+            <div class='colourBoxC2' id='mischievousBoxC2' style='background-color: #E59866; border-color: #873600;'>mischievous</div>
+
+            <div class='colourBoxPointerC2' id='peacefulC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='darkC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='lonelyC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='sadnessC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='romanticC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='flirtatiousC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='confidenceC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='predatoryC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='flightC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='exerciseC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='fightC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='celebratoryC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='chaoticC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+            <div class='colourBoxPointerC2' id='mischievousC2'><img src="../../static/scory_story_v2_static/images/rightArrow.png"></div>
+
+            <script>
+
+                function myFunction() {var pointer = $('#paragraphPointer').offset();
+
+                var playing=false; var peacefulSong = $('#peacefulSong').get(0); var darkSong = $('#darkSong').get(0); var lonelySong = $('#lonelySong').get(0); var sadnessSong = $('#sadnessSong').get(0); var romanticSong = $('#romanticSong').get(0); var flirtatiousSong = $('#flirtatiousSong').get(0); var confidenceSong = $('#confidenceSong').get(0); var predatorySong = $('#predatorySong').get(0); var flightSong = $('#flightSong').get(0); var exerciseSong = $('#exerciseSong').get(0); var fightSong = $('#fightSong').get(0); var celebratorySong = $('#celebratorySong').get(0); var chaoticSong = $('#chaoticSong').get(0); var mischievousSong = $('#mischievousSong').get(0);
+
+                var peacefulGenrePlaying = false; var darkGenrePlaying = false; var lonelyGenrePlaying = false; var sadnessGenrePlaying = false; var romanticGenrePlaying = false; var flirtatiousGenrePlaying = false; var confidenceGenrePlaying = false; var predatoryGenrePlaying = false; var flightGenrePlaying = false; var exerciseGenrePlaying = false; var fightGenrePlaying = false; var celebratoryGenrePlaying = false; var chaoticGenrePlaying = false; var mischievousSGenrePlaying = false;
+
+                {% set parNum = 0 %}
+                {% for genre in combinedGenres %}
+                    var p{{parNum}}= $('#p{{parNum}}').offset();
+
+                    {% if genre[0] == 'peaceful' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').show();$('#dark').hide();$('#lonely').hide();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').hide();$('#flight').hide();$('#exercise').hide();$('#fight').hide();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'dark' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').show();$('#lonely').hide();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').hide();$('#flight').hide();$('#exercise').hide();$('#fight').hide();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'lonely' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').show();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').hide();$('#flight').hide();$('#exercise').hide();$('#fight').hide();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'sadness' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').hide();$('#sadness').show();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').hide();$('#flight').hide();$('#exercise').hide();$('#fight').hide();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'romantic' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').hide();$('#sadness').hide();$('#romantic').show();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').hide();$('#flight').hide();$('#exercise').hide();$('#fight').hide();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'flirtatious' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').hide();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').show();$('#confidence').hide();$('#predatory').hide();$('#flight').hide();$('#exercise').hide();$('#fight').hide();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'confidence' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').hide();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').show();$('#predatory').hide();$('#flight').hide();$('#exercise').hide();$('#fight').hide();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'predatory' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').hide();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').show();$('#flight').hide();$('#exercise').hide();$('#fight').hide();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'flight' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').hide();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').hide();$('#flight').show();$('#exercise').hide();$('#fight').hide();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'exercise' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').hide();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').hide();$('#flight').hide();$('#exercise').show();$('#fight').hide();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'fight' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').hide();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').hide();$('#flight').hide();$('#exercise').hide();$('#fight').show();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'celebratory' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').hide();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').hide();$('#flight').hide();$('#exercise').hide();$('#fight').hide();$('#celebratory').show();$('#chaotic').hide();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'chaotic' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').hide();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').hide();$('#flight').hide();$('#exercise').hide();$('#fight').hide();$('#celebratory').hide();$('#chaotic').show();$('#mischievous').hide();}
+
+                    {% elif genre[0] == 'mischievous' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peaceful').hide();$('#dark').hide();$('#lonely').hide();$('#sadness').hide();$('#romantic').hide();$('#flirtatious').hide();$('#confidence').hide();$('#predatory').hide();$('#flight').hide();$('#exercise').hide();$('#fight').hide();$('#celebratory').hide();$('#chaotic').hide();$('#mischievous').show();}
+                     {% endif %}
+
+
+                    {% if genre[1] == 'peaceful' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').show();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'dark' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').show();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = true; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'lonely' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').show();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = true; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'sadness' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').show();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = true; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'romantic' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').show();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = true; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'flirtatious' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').show();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = true; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'confidence' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').show();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = true; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'predatory' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').show();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = true; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'flight' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').show();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = true; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'exercise' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').show();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = true; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'fight' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').show();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = true; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'celebratory' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').show();$('#chaoticC2').hide();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = true; chaoticGenrePlaying = false; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'chaotic' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').show();$('#mischievousC2').hide(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = true; mischievousGenrePlaying = false;}
+
+                    {% elif genre[1] == 'mischievous' %}
+                        if(pointer.top > p{{parNum}}.top) {$('#peacefulC2').hide();$('#darkC2').hide();$('#lonelyC2').hide();$('#sadnessC2').hide();$('#romanticC2').hide();$('#flirtatiousC2').hide();$('#confidenceC2').hide();$('#predatoryC2').hide();$('#flightC2').hide();$('#exerciseC2').hide();$('#fightC2').hide();$('#celebratoryC2').hide();$('#chaoticC2').hide();$('#mischievousC2').show(); peacefulGenrePlaying = false; darkGenrePlaying = false; lonelyGenrePlaying = false; sadnessGenrePlaying = false; romanticGenrePlaying = false; flirtatiousGenrePlaying = false; confidenceGenrePlaying = false; predatoryGenrePlaying = false; flightGenrePlaying = false; exerciseGenrePlaying = false; fightGenrePlaying = false; celebratoryGenrePlaying = false; chaoticGenrePlaying = false; mischievousGenrePlaying = true;}
+                     {% endif %}
+                     {% set parNum = parNum + 1 %}
+                {% endfor %}
+
+                if(peacefulGenrePlaying == true){ peacefulSong.play();}else{peacefulSong.pause();}
+                if(darkGenrePlaying == true){ darkSong.play();}else{darkSong.pause();}
+                if(lonelyGenrePlaying == true){ lonelySong.play();}else{lonelySong.pause();}
+                if(sadnessGenrePlaying == true){ sadnessSong.play();}else{sadnessSong.pause();}
+                if(romanticGenrePlaying == true){ romanticSong.play();}else{romanticSong.pause();}
+                if(flirtatiousGenrePlaying == true){ flirtatiousSong.play();}else{flirtatiousSong.pause();}
+                if(confidenceGenrePlaying == true){ confidenceSong.play();}else{confidenceSong.pause();}
+                if(predatoryGenrePlaying == true){ predatorySong.play();}else{predatorySong.pause();}
+                if(flightGenrePlaying == true){ flightSong.play();}else{flightSong.pause();}
+                if(exerciseGenrePlaying == true){ exerciseSong.play();}else{exerciseSong.pause();}
+                if(fightGenrePlaying == true){ fightSong.play();}else{fightSong.pause();}
+                if(celebratoryGenrePlaying == true){ celebratorySong.play();}else{celebratorySong.pause();}
+                if(chaoticGenrePlaying == true){ chaoticSong.play();}else{chaoticSong.pause();}
+                if(mischievousGenrePlaying == true){ mischievousSong.play();}else{mischievousSong.pause();}
+                ;}
+            </script>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-md-8 info-panel" id="app-info">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <p>On this page you can scroll through the phone to read your story and a soundtrack corresponding with the paragraghs will play in the background.</p><br>
+            <p><strong><u>Understanding this Page</u></strong></p>
+            <p>The dotted red line behind the phone indicates where the program assumes you are at in the story.</p>
+            <p>The first column of literary scenes is what Scory Story classified your current paragraph as.</p>
+            <p>The second column indicates the literary scene that Scory Story will retrive music from. This column accomodates for subtle changes in tone that may occur. For example, if paragraph 1 is a flirtatious scene and paragraph 2 is a romantic scene, the same song should play since they are similar enough in tone not to require a song change. This allows for fewer song changes and smoother transitions throughout the story.</p>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+        $(".info-pulse").click(function(){
+            $(".info-panel").show(500);
+        });
+    });
+    </script>
+</div>
+{% endblock %}

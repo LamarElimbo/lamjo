@@ -1,0 +1,118 @@
+html {
+    height: 100%;
+}
+
+.bodystyle {
+    height: 100%;
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0,176,240,.9), rgba(0,0,0,.2) 1px, transparent 0.1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center, rgba(0,176,240,.9), rgba(0,0,0,.2) 1px, transparent 0.1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center, rgba(0,176,240,.9), rgba(0,0,0,.2) 1px, transparent 0.1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0,176,240,.9), rgba(0,0,0,.2) 1px, transparent 0.1px, transparent 100%);
+    -webkit-background-size: 3px 3px;
+    -moz-background-size: 3px 3px;
+    background-size: 3px 3px;
+}
+
+#sound {
+    width: 100%;
+    z-index: 0;
+}
+
+#search-bar {
+    position: absolute;
+    width: 85%;
+    height: 40px;
+    border: .1em solid white;
+    border-radius: 0.07em;
+    background-color: #7F7F7F;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+    letter-spacing: 5px;
+    z-index: 90;
+}
+
+
+#submitButton {
+    position: relative;
+    height: 40px;
+    left: 90%;
+    width: 45px;
+    border: .1em solid white;
+    border-radius: 0.07em;
+    background: #574e51;
+    cursor: pointer;
+    padding-left: 13px;
+}
+
+#search-image {
+    height: 70%;
+}
+
+#story-input {
+    position: absolute;
+    top: 60%;
+}
+
+#story-input ::placeholder {
+    color: white;
+    text-align: center;
+}
+
+#samples {
+    position: relative;
+    margin-top: 7%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.sample-button {
+    background-color: #7F7F7F;
+    width: 100%;
+    border-radius: 0.5em;
+    color: white;
+    font-family: 'Indie Flower', cursive;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#divider {
+    position: relative;
+    top:25px;
+    height: 5px;
+    width: 100%;
+    border-top: 3px dotted gray;
+}
+
+.profile_container {
+    width:100%;
+    position: relative;
+}
+
+#profile-card {
+    padding-top: 10%;
+}
+
+#profile-card p {
+    color: #574e51;
+    font-family: 'Indie Flower', cursive;
+    font-size: 20px;
+}
+
+#title {
+    position: absolute;
+    text-align: right;
+    right: 30px;
+    top: 0px;
+}
+
+#description {
+    position: relative;
+    top: 20px;
+}
+
+#app-info {
+    background-color: darkcyan;
+    font-family: 'Yatra One', cursive;
+}

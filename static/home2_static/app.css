@@ -1,0 +1,982 @@
+body {
+    background: url('grid2.png');
+}
+
+#content-box {
+    border: 1px solid #C00000;
+    margin: 10px;
+}
+
+#home {
+    width: 100%;
+}
+
+.starter-left {
+    margin: 3%
+}
+
+#agent {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin: 5%;
+    font-size: 18px;
+    color: #C00000;
+    text-align: center;
+}
+
+.personal-info-box {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    font-family: 'PT Mono', monospace;
+}
+
+.personal-info-label {
+    position: absolute;
+    left: 0;
+    width: 40%;
+    margin: 5%;
+    font-size: 14px;
+    color: #C00000;
+    text-align: right;
+}
+
+.personal-info-info {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    margin: 5%;
+    font-size: 14px;
+    color: #C00000;
+}
+
+#starter-right {
+    margin: 3%;
+}
+
+#socials-title {
+    position: absolute;
+    top: -10px;
+    right: 5%;
+    border: 1px solid #C00000;
+    border-radius: 0.3em;
+    background-color: #C00000;
+    font-family: 'PT Mono', monospace;
+    font-size: 14px;
+    color: black;
+}
+
+#social-box-area {
+    border: 1px solid #C00000;
+    background-color: rgba(192,0,0,0.20);
+    width: 70%;
+    margin-left: 30%;
+}
+
+.logo {
+    width: 40px;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    opacity: 30%;
+    position: relative;
+    right: 0;
+}
+
+#appearance {
+    border: 1px solid #C00000;
+    background-color: rgba(192,0,0,0.20);
+    position: relative;
+    margin: 7%;
+}
+
+#me {
+    width: 130px;
+    margin: 3%;
+}
+
+#appearance-title {
+    position: absolute;
+    top: -10px;
+    right: 5%;
+    border: 1px solid #C00000;
+    border-radius: 0.3em;
+    background-color: #C00000;
+    font-family: 'PT Mono', monospace;
+    font-size: 14px;
+    color: black;
+}
+
+#appearance-box-area {
+    position: absolute;
+    right:0;
+    top:5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.appearance-box {
+    position: relative;
+    top: 15px;
+    margin: 7px;
+    width: 200px;
+    height: 35px;
+}
+
+.appearance-box-label {
+    position: absolute;
+    left: 0;
+    width: 45%;
+    height: 100%;
+    border: 1px solid #C00000;
+    border-radius: 0.5em;
+    background-color: rgba(192,0,0,0.20);
+    font-family: 'PT Mono', monospace;
+    font-size: 70%;
+    color: #e7b0a2;
+    text-align: center;
+    line-height: 35px;
+    vertical-align: middle;
+}
+
+.appearance-box-info {
+    position: absolute;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    border: 1px solid #C00000;
+    border-radius: 0.5em;
+    background-color: rgba(192,0,0,0.20);
+    font-family: 'PT Mono', monospace;
+    font-size: 70%;
+    color: #e7b0a2;
+    text-align: center;
+    line-height: 35px;
+    vertical-align: middle;
+}
+
+#eye {
+    background-color: #341910;
+}
+
+#hair1 {
+    background-color: #24181A;
+    width: 20%;
+    right: 25%;
+}
+
+#hair2 {
+    background-color: #998E9B;
+    width: 20%;
+}
+
+#map-area {
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    margin-top: 10%;
+}
+
+#current-location {
+    position: absolute;
+    top: 37%;
+    left: 18%;
+    border: 3px solid blue;
+    -webkit-border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0;    
+    cursor: pointer;
+}
+
+.nationalities {
+    display: none;
+    position: absolute;
+    border: 3px solid lightgray;
+    -webkit-border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0;    
+    cursor: pointer;
+}
+
+.visited {
+    display: none;
+    position: absolute;
+    border: 3px solid greenyellow;
+    -webkit-border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0;    
+    cursor: pointer;
+}
+
+#jamaica {
+    top: 52%;
+    left: 17%;
+}
+
+#italy {
+    top: 39%;
+    left: 44%;
+}
+
+#czech {
+    top: 34%;
+    left: 45%;
+}
+
+#croatia {
+    top: 37%;
+    left: 45%;
+}
+
+#dominican {
+    top: 52%;
+    left: 19%;
+}
+
+#cuba {
+    top: 50%;
+    left: 15%;
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+.tooltip-inner, .arrow {
+    color: white !important;
+    background-color: rgba(173, 22, 77, .85) !important;
+}
+
+#icon-current-location {
+    position: absolute;
+    bottom: 21%;
+    left: 10px;
+    height: 20px;
+    width: 20px;    
+    cursor: pointer;
+}
+
+#icon-nationalities {
+    position: absolute;
+    bottom: 13%;
+    left: 10px;
+    height: 20px;
+    width: 20px;    
+    cursor: pointer;
+}
+
+#icon-visited {
+    position: absolute;
+    bottom: 5%;
+    left: 10px;
+    height: 20px;
+    width: 20px;    
+    cursor: pointer;
+}
+
+#languages {
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+#languages-title {
+    position: absolute;
+    width: 100px;
+    top: -10px;
+    right: 5%;
+    border: 1px solid #C00000;
+    border-radius: 0.3em;
+    background-color: #C00000;
+    font-family: 'PT Mono', monospace;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+}
+
+#voicebox-area {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    border-top:  1px solid #C00000;
+}
+
+.waves {
+    width: 20%;
+    height: 50px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#languages-area {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.language {
+    width: 70px;
+    border: 1px solid rgb(89,89,89);
+    border-radius: 0.3em;
+    background-color: rgb(66,66,66);
+    font-family: 'PT Mono', monospace;
+    font-size: 14px;
+    color: #e7b0a2;
+    text-align: center;
+}
+
+#academics-title {
+    position: relative;
+    width: 200px;
+    top: 10px;
+    left: 5%;
+    border: 1px solid #C00000;
+    border-radius: 0.3em;
+    background-color: #C00000;
+    font-family: 'PT Mono', monospace;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+}
+
+#academics-area {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content:space-between;
+    border-top:  1px solid #C00000;
+}
+
+.academic-item {
+    position: absolute;
+    height: 25px;
+    line-height: 25px;
+    color: #e7b0a2;
+    border: 1px solid #656265;
+    border-radius: 0.3em;
+    font-family: 'PT Mono', monospace;
+    font-size: 70%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#york {
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    width: 10%;
+}
+
+#psychology {
+    top: 30%;
+    left: 15%;
+    width: 20%;
+    height: 35px;
+    line-height: 35px;
+    background-color: rgba(255, 118, 54, 0.3);
+}
+
+#neuroscience {
+    top: 57%;
+    left: 20%;
+    width: 20%;
+    background-color: rgba(255,118,54,0.3);
+}
+
+#social-psych {
+    top: 80%;
+    left: 20%;
+    width: 23%;
+    background-color: rgba(255,118,54,0.3);
+}
+
+#anatomy {
+    top: 57%;
+    left: 43%;
+    width: 20%;
+    background-color: rgba(255,118,54,0.3);
+}
+
+#power-dynamics {
+    top: 80%;
+    left: 46%;
+    width: 27%;
+    background-color: rgba(255,118,54,0.3);
+}
+
+#honour-roll {
+    top: 30%;
+    left: 37%;
+    width: 35%;
+    height: 35px;
+    line-height: 35px;
+    background-color: rgba(255,192,0,0.3);
+}
+
+#linguistics {
+    top: 30%;
+    left: 74%;
+    width: 23%;
+    height: 35px;
+    line-height: 35px;
+    background-color: rgba(0,135,61,0.25);
+}
+
+#neurolinguistics {   
+    top: 50%;
+    left: 78%;
+    width: 20%;
+    background-color: rgba(0,135,61,0.25);
+}
+
+#psycholinguistics {
+    top: 65%;
+    left: 78%;
+    width: 20%;
+    background-color: rgba(0,135,61,0.25);
+}
+
+#discourse-analysis {
+    top: 80%;
+    left: 78%;
+    width: 20%;
+    background-color: rgba(0,135,61,0.25);
+}
+
+.academic-connector {
+    position: absolute;
+}
+
+#academic-connector-1 {
+    top: 50%;
+    left: 18%;
+    height: 30px;
+    width: 1%;
+    border-left: 1px solid #C00000;
+    border-bottom: 1px solid #C00000;
+}
+
+#academic-connector-2 {
+    top: 72%;
+    left: 18%;
+    height: 30px;
+    width: 1%;
+    border-left: 1px solid #C00000;
+    border-bottom: 1px solid #C00000;
+}
+
+#academic-connector-3 {
+    top: 63%;
+    left: 41%;
+    width: 1%;
+    border-left: 1px solid #C00000;
+    border-bottom: 1px solid #C00000;
+}
+
+#academic-connector-4 {
+    top: 85%;
+    left: 44%;
+    width: 1%;
+    border-left: 1px solid #C00000;
+    border-bottom: 1px solid #C00000;
+}
+
+#academic-connector-5 {
+    top: 48%;
+    left: 75%;
+    width: 2%;
+    height: 9%;
+    border-left: 1px solid #C00000;
+    border-bottom: 1px solid #C00000;
+}
+
+#academic-connector-6 {
+    top: 62%;
+    left: 75%;
+    width: 2%;
+    height: 9%;
+    border-left: 1px solid #C00000;
+    border-bottom: 1px solid #C00000;
+}
+
+#academic-connector-7 {
+    top: 76%;
+    left: 75%;
+    width: 2%;
+    height: 10%;
+    border-left: 1px solid #C00000;
+    border-bottom: 1px solid #C00000;
+}
+
+#volunteer-title {
+    position: relative;
+    width: 50%;
+    top: 10px;
+    left: 5%;
+    border: 1px solid #C00000;
+    border-radius: 0.3em;
+    background-color: #C00000;
+    font-family: 'PT Mono', monospace;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+}
+
+#volunteer-area {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content:space-between;
+    border-top:  1px solid #C00000;
+}
+
+.volunteer-item {
+    position: absolute;
+    height: 25px;
+    line-height: 25px;
+    border-bottom: 2px solid #C00000;
+    color: #e7b0a2;
+    border: 1px solid rgb(89, 89, 89);
+    border-radius: 0.3em;
+    font-family: 'PT Mono', monospace;
+    font-size: 70%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(66,66,66);
+}
+
+#hospice {
+    top: 28%;
+    left: 7%;
+    width: 48%;
+}
+
+#terry-fox {
+    top: 52%;
+    left: 7%;
+    width: 48%;
+}
+
+#hotline {
+    top: 75%;
+    left: 7%;
+    width: 48%;
+}
+
+#date-2013 {
+    top: 1px;
+    left: 57%;
+    width: 7%;
+    border-bottom: 2px solid rgb(89, 89, 89);
+}
+
+#date-2014 {
+    top: 1px;
+    left: 65%;
+    width: 7%;
+    border-bottom: 2px solid rgb(89, 89, 89);
+}
+
+#date-2015 {
+    top: 1px;
+    left: 73%;
+    width: 7%;
+    border-bottom: 2px solid rgb(89, 89, 89);
+}
+
+#date-2016 {
+    top: 1px;
+    left: 81%;
+    width: 7%;
+    border-bottom: 2px solid rgb(89, 89, 89);
+}
+
+#date-2017 {
+    top: 1px;
+    left: 89%;
+    width: 7%;
+    border-bottom: 2px solid rgb(89, 89, 89);
+}
+
+.volunteer-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #C00000;
+    border-radius: 50%;
+    background-color: rgba(180,25,155,0.25);
+}
+
+#volunteer-dot-1{
+    top: 50px;
+    left: 59%;
+}
+
+#volunteer-dot-2{
+    top: 50px;
+    left: 75%;
+}
+
+#volunteer-dot-3{
+    top: 92px;
+    left: 59%;
+}
+
+#volunteer-dot-4{
+    top: 133px;
+    left: 59%;
+}
+
+#volunteer-dot-5{
+    top: 133px;
+    left: 91%;
+    background-color: #C00000 !important;    
+    cursor: pointer;
+}
+
+.volunteer-connector {
+    position: absolute;
+    border-bottom: 6px solid rgba(180,25,155,0.25)
+}
+
+#volunteer-connector-1 {
+    top: 55px;
+    left: 64%;
+    width: 8%;
+}
+
+#volunteer-connector-2 {
+    top: 140px;
+    left: 64%;
+    width: 24%;
+}
+
+#stack-title {
+    position: relative;
+    width: 30%;
+    top: 10px;
+    left: 35%;
+    border: 1px solid #C00000;
+    border-radius: 0.3em;
+    background-color: #C00000;
+    font-family: 'PT Mono', monospace;
+    font-size: 14px;
+    color: black;
+    text-align: center;
+}
+
+#stack-area {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content:space-between;
+    border-top:  1px solid #C00000;
+}
+
+.stack-item-title {
+    position: absolute;
+    height: 25px;
+    line-height: 25px;
+    color: #e7b0a2;
+    border: rgba(192, 0, 0, 0.43);
+    border-radius: 0.3em;
+    font-family: 'PT Mono', monospace;
+    font-size: 70%;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(180,25,155,0.25);
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#title-web-dev {
+    top: 10%;
+    left: 3%;
+    width: 30%;
+    text-align: left;
+}
+
+#title-drawing {
+    bottom: 3%;
+    left: 3%;
+    width: 30%;
+    text-align: left;
+}
+
+#title-ml-nltk {
+    top: 10%;
+    left: 40%;
+    width: 20%;
+    height: 50px;
+}
+
+#title-scripting {
+    top: 10%;
+    right: 3%;
+    width: 30%;
+    text-align: right;
+}
+
+#title-apis {
+    bottom: 3%;
+    right: 3%;
+    width: 30%;
+    text-align: right;
+}
+
+.stack-item {
+    position: absolute;
+    height: 25px;
+    color: #e7b0a2;
+    border: rgba(192, 0, 0, 0.34);
+    border-radius: 0.3em;
+    font-family: 'PT Mono', monospace;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(180,25,155,0.25);
+}
+
+#web-dev {
+    top: 13%;
+    left: 23%;
+    width: 15%;
+    height: 200px;
+    background-color: rgba(255, 54, 224, 0.3);
+}
+
+#drawing {
+    top: 290px;
+    left: 23%;
+    width: 15%;
+    height: 200px;
+    background-color: rgba(255, 192, 0, 0.3);
+}
+
+#ml-nltk {
+    top: 110px;
+    left: 40%;
+    width: 20%;
+    height: 400px;
+    background-color: rgba(255, 118, 54, 0.3);
+    font-size: 12px;
+}
+
+#scripting {
+    top: 13%;
+    right: 23%;
+    width: 15%;
+    height: 200px;
+    background-color: rgba(0, 56, 77, 0.7);
+}
+
+#apis {
+    top: 290px;
+    right: 23%;
+    width: 15%;
+    height: 200px;
+    background-color: rgba(0, 176, 80, 0.3);
+}
+
+.stack-project-link {
+    position: absolute;
+    color: #C00000;
+    font-family: 'PT Mono', monospace;
+    font-size: 14px;
+}
+
+.stack-item-projects {
+    position: absolute;
+    color: #C00000;
+    font-family: 'PT Mono', monospace;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.stack-item-projects p {
+    cursor: pointer;
+}
+
+#web-dev-projects {
+    text-align: right;
+    top: 13%;
+    left: 3%;
+}
+
+#drawing-projects {
+    text-align: right;
+    top: 290px;
+    left: 3%;
+}
+
+#scripting-projects {
+    text-align: left;
+    top: 13%;
+    right: 3%;
+}
+
+#apis-projects {
+    text-align: left;
+    top: 290px;
+    right: 3%;
+}
+
+.stack-connector {
+    position: absolute;
+    border-right: 1px solid #C00000;
+    border-bottom: 1px solid #C00000;
+}
+
+#stack-connector-1 {
+    top: 100px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-2 {
+    top: 135px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-3 {
+    top: 172px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-4 {
+    top: 208px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-5 {
+    top: 246px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-6 {
+    top: 320px;
+    left: 17%;
+    width: 7%;
+}
+
+#stack-connector-7 {
+    top: 358px;
+    left: 17%;
+    width: 8%;
+}
+
+#stack-connector-8 {
+    top: 394px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-9 {
+    top: 431px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-10 {
+    top: 470px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-11 {
+    top: 100px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-12 {
+    top: 100px;
+    left: 74%;
+    width: 5%;
+    height: 40px;
+}
+
+#stack-connector-13 {
+    top: 172px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-14 {
+    top: 208px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-15 {
+    top: 246px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-16 {
+    top: 320px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-17 {
+    top: 320px;
+    left: 81%;
+    width: 2%;
+    height: 40px;
+    border-left: 1px solid #C00000;
+    border-right: 0px;
+}
+
+#stack-connector-18 {
+    top: 360px;
+    left: 74%;
+    width: 5%;
+    height: 35px;
+    border-bottom: 0px;
+    border-top: 1px solid #C00000;
+}
+
+#stack-connector-19 {
+    top: 394px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-20 {
+    top: 433px;
+    left: 74%;
+    width: 9%;
+}
+
+
+#contact {
+    font-family: 'PT Mono', monospace;
+    font-size: 18px;
+    color: #C00000;
+    text-align: center;
+    letter-spacing: 5px;
+}

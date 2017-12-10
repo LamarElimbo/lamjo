@@ -1,0 +1,21 @@
+body {
+    background: url('grid.png');
+}
+
+.framework-option {
+    font-family: 'PT Mono', monospace;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 5px;
+    position: relative;
+    margin-top: 30%;
+    width: 100%;
+}
+
+#flask a{
+    color: #0070C0;
+}
+
+#django a{
+    color: #C00000;
+}

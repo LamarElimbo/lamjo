@@ -1,0 +1,104 @@
+.project {
+    border-left: 1px solid #0070C0;
+    border-right: 1px solid #0070C0;
+}
+
+#header {
+    width: 100%;
+    background-color: rgba(0, 176, 80, 0.25);
+    z-index: 100;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+#header a {
+    font-family: 'PT Mono', monospace;
+    color: #00B0F0;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+#header-sleuth {
+    visibility: hidden; 
+}
+
+.navbar {
+    display: block !important;
+    outline: none;
+}
+
+.navbar-nav {
+    display: flex;
+    box-shadow:none !important;
+}
+
+.navbar-nav li {
+  flex: 1;
+
+  text-align: center;
+}
+
+.dropdown-menu {
+    background-color: rgba(1, 46, 35, 0.95) !important;
+    box-shadow:none;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(0, 15, 52, 0.95) !important;
+}
+
+a, button:active, .button:active, button:focus, .button:focus, button:hover, .button:hover{
+    border:none !important;
+    outline:none !important;
+}
+
+.info-pulse {
+    border: 3px solid #999;
+    -webkit-border-radius: 30px;
+    height: 30px;
+    width: 30px;
+    position: fixed;
+    right:50px;
+    bottom:50px;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0;    
+    cursor: pointer;
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+.info-panel {
+    display: none;
+    z-index: 1001;
+}
+
+#app-info {
+    position: fixed;
+    top: 70px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    opacity: 0.95;
+    border:  .5em solid white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}

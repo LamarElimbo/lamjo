@@ -1,0 +1,383 @@
+html {
+    height: 100%;
+}
+
+.bodystyle {
+    height: 100%;
+    background-color:black;
+}
+
+#phoneArea {
+    position: relative;
+    width: 285px;
+    height: 600px;
+    top:50px;
+    left:60px;
+    background:white;
+}
+
+#mobile img {
+    position: absolute;
+    height: 710px;
+    top:30px;
+}
+
+#storiesBox {
+    position: absolute;
+    width: 271px;
+    height: 120px;
+    top: 114px;
+    left: 70px;
+}
+
+.storyButtons {
+    position: absolute;
+    width: 135px;
+    height: 40px;
+    background: #eff0f1;
+    border-style: solid;
+    border: dotted 2px;
+    border-color: #b1a592;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+#storyButton1 {
+    left:10px;
+    top:5px;
+}
+
+#storyButton2 {
+    left:10px;
+    top:45px;
+}
+
+#storyButton3 {
+    left:10px;
+    top:85px;
+}
+
+#storyButton4 {
+    left:10px;
+    top:125px;
+}
+
+#storyButton5 {
+    left:148px;
+    top:5px;
+}
+
+#storyButton6 {
+    left:148px;
+    top:45px;
+}
+
+#storyButton7 {
+    left:148px;
+    top:85px;
+}
+
+#storyButton8 {
+    left:148px;
+    top:125px;
+}
+
+#instructionBox {
+    position: absolute;
+    width: 271px;
+    height: 80px;
+    top: 283px;
+    left: 80px;
+    font-size: 16px;
+    text-align: center;
+    color:darkgoldenrod;
+}
+
+#mobileBox {
+    position: absolute;
+    width: 277px;
+    height: 235px;
+    top: 375px;
+    left: 77px;
+}
+
+#mobileBox2 {
+    position: absolute;
+    width: 281px;
+    height: 499px;
+    top: 112px;
+    left: 75px;
+    background: white;
+}
+
+#storyInput {
+    width:100%;
+    height:100%;
+}
+
+#submitButton {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: black;
+    color: white;
+    left:40%;
+    top:243px;
+    border-radius:50%;
+    text-align: center;
+    font-size: 14px;
+}
+
+#refreshButton {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: black;
+    color: white;
+    left:180px;
+    top:617px;
+    border-radius:50%;
+    text-align: center;
+    font-size: 14px;
+}
+
+#resultStory {
+    width:100%;
+    height:100%;
+    overflow: scroll;
+    color:black;
+}
+
+#resultStory p {
+    color:black;
+}
+
+#paragraphPointer {
+    position: absolute;
+    top: 200px;
+    left: 15px;
+    border-top: dotted 3px;
+    width: 385px;
+    height: 200px;
+    border-color: red;
+}
+
+.colourBoxC1 {
+    position: absolute;
+    left: 412px;
+    width: 150px;
+    height: 35px;
+    border-style: solid;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.colourBoxC2 {
+    position: absolute;
+    left: 675px;
+    width: 150px;
+    height: 35px;
+    border-style: solid;
+    color: white;
+    font-size: 22px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.colourBoxPointerC1 {
+    position: absolute;
+    left: 565px;
+}
+
+.colourBoxPointerC2 {
+    position: absolute;
+    left: 625px;
+}
+
+.colourBoxPointerC1 img {
+    max-width: 49px;
+}
+
+.colourBoxPointerC2 img {
+    max-width: 49px;
+}
+
+#peacefulBox {
+    top: 35px;
+}
+#darkBox {
+    top: 82px;
+}
+#lonelyBox {
+    top: 129px;
+}
+#sadnessBox {
+    top: 176px;
+}
+#romanticBox {
+    top: 223px;
+}
+#flirtatiousBox {
+    top: 270px;
+}
+#confidenceBox {
+    top: 317px;
+}
+#predatoryBox {
+    top: 364px;
+}
+#flightBox {
+    top: 411px;
+}
+#exerciseBox {
+    top: 458px;
+}
+#fightBox {
+    top: 505px;
+}
+#celebratoryBox {
+    top: 552px;
+}
+#chaoticBox {
+    top: 599px;
+}
+#mischievousBox {
+    top: 646px;
+}
+
+#peaceful {
+    top: 35px;
+}
+#dark {
+    top: 82px;
+}
+#lonely {
+    top: 129px;
+}
+#sadness {
+    top: 176px;
+}
+#romantic {
+    top: 223px;
+}
+#flirtatious {
+    top: 270px;
+}
+#confidence {
+    top: 317px;
+}
+#predatory {
+    top: 364px;
+}
+#flight {
+    top: 411px;
+}
+#exercise {
+    top: 458px;
+}
+#fight {
+    top: 505px;
+}
+#celebratory {
+    top: 552px;
+}
+#chaotic {
+    top: 599px;
+}
+#mischievous {
+    top: 646px;
+}
+
+#peacefulBoxC2 {
+    top: 35px;
+}
+#darkBoxC2 {
+    top: 82px;
+}
+#lonelyBoxC2 {
+    top: 129px;
+}
+#sadnessBoxC2 {
+    top: 176px;
+}
+#romanticBoxC2 {
+    top: 223px;
+}
+#flirtatiousBoxC2 {
+    top: 270px;
+}
+#confidenceBoxC2 {
+    top: 317px;
+}
+#predatoryBoxC2 {
+    top: 364px;
+}
+#flightBoxC2 {
+    top: 411px;
+}
+#exerciseBoxC2 {
+    top: 458px;
+}
+#fightBoxC2 {
+    top: 505px;
+}
+#celebratoryBoxC2 {
+    top: 552px;
+}
+#chaoticBoxC2 {
+    top: 599px;
+}
+#mischievousBoxC2 {
+    top: 646px;
+}
+
+#peacefulC2 {
+    top: 35px;
+}
+#darkC2 {
+    top: 82px;
+}
+#lonelyC2 {
+    top: 129px;
+}
+#sadnessC2 {
+    top: 176px;
+}
+#romanticC2 {
+    top: 223px;
+}
+#flirtatiousC2 {
+    top: 270px;
+}
+#confidenceC2 {
+    top: 317px;
+}
+#predatoryC2 {
+    top: 364px;
+}
+#flightC2 {
+    top: 411px;
+}
+#exerciseC2 {
+    top: 458px;
+}
+#fightC2 {
+    top: 505px;
+}
+#celebratoryC2 {
+    top: 552px;
+}
+#chaoticC2 {
+    top: 599px;
+}
+#mischievousC2 {
+    top: 646px;
+}
+
+#app-info {
+    background-color: #6B582D;
+    font-family: 'Yatra One', cursive;
+}

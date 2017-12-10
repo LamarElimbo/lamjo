@@ -1,0 +1,56 @@
+{% extends "_skeleton_template.html" %}
+{% block title %}Lamar's Web Apps - Scory Story 1.0{% endblock %}
+{% block content %}
+
+<div class="info-pulse"></div>
+
+<div class="container">
+    <br>
+    <div class="row justify-content-between">
+        <div class="col-xs-12 col-md-4 align-self-start">
+            <div>
+                <br><br>
+                <img src="../../static/scory_story_v1_static/sound.png" id='sound'>
+                <br>
+                <input type='textarea' id='search-bar' form='textform' name='story' placeholder="SCORE SOME TEXT">
+                <form action="{{ url_for('scory_story_v1_result')}}" id='textform' method='post'>
+                    <button type="submit" id='submitButton' form='textform'><img src="../../static/scory_story_v1_static/search.png" id='search-image'></button>
+                </form>
+                <div id="samples">
+                    <div class="col-xs-12 col-md">
+                        <div class="sample-button" title="I had never cried so much.">SAMPLE</div>
+                    </div>
+                    <div class="col-xs-12 col-md">
+                        <div class="sample-button" title="They are constantly fighting!">SAMPLE</div>
+                    </div>
+                    <div class="col-xs-12 col-md">
+                        <div class="sample-button" title="I am only happy when I am with you.">SAMPLE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-11 col-md-6" id='profile-card'>
+          <p><b>Your input:</b> "{{sent}}"</p>
+          <p>Scory Story classified it as a <b>{{genre}}</b> scene, which would probably sound good with {{musicGenre}} music</p>
+          <iframe src="https://www.youtube.com/embed/{{youtube_id}}" width="100%" height="315px" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-md-8 info-panel" id="app-info">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <p>Scory Story 1.0 is the near paramount of text classification software.  With the potential of becoming StereoMood on steroids, Scory Story 1.0 offers the ability to not just select music based on your mood but to project yourself into the life of an on-screen character with a soundtracked life.</p><br>
+            <p>Simply enter in a sentence based on how you feel, what you're doing or what's going on around you and Scory Story will decide what type of movie scene that would be and offer up a genre and song choice to match.</p><br>
+            <p>Enjoy!</p>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+        $(".info-pulse").click(function(){
+            $(".info-panel").show(500);
+        });
+    });
+    </script>
+    <script src="../../static/scory_story_v1_static/sample_search.js"></script>
+</div>
+{% endblock %}

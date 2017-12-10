@@ -1,0 +1,123 @@
+html {
+    height: 100%;
+}
+
+.project {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#header {
+    width: 100%;
+    background-color: #6B582D;
+    z-index: 100;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+#header a {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+	
+.bodystyle {
+    background: #5C0C2D;
+}
+
+#crest {
+    width: 100%;
+}
+
+#search-bar {
+    position: absolute;
+    width: 85%;
+    height: 40px;
+    border: .1em solid #6B582D;
+    border-radius: 0.07em;
+    background-color: black;
+    color: #6B582D;
+    font-family: 'Yatra One', cursive;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+#submitButton {
+    position: relative;
+    height: 40px;
+    left: 90%;
+    width: 45px;
+    border: .1em solid #6B582D;
+    border-radius: 0.07em;
+    background-color: #6B582D;
+    cursor: pointer;
+    padding-left: 13px;
+}
+
+#search-image {
+    height: 70%;
+}
+
+#spell-input {
+    position: absolute;
+    top: 60%;
+}
+
+#spell-input ::placeholder {
+    color: #6B582D;
+    text-align: center;
+}
+
+#samples {
+    position: relative;
+    margin-top: 7%;
+    display: flex;
+    justify-content:space-between;
+}
+
+.sample-button {
+    background-color: #6B582D;
+    width: 100%;
+    border-radius: 0.5em;
+    color: white;
+    font-family: 'Yatra One', cursive;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#divider {
+    position: relative;
+    top:25px;
+    height: 5px;
+    width: 100%;
+    border-top: 3px dotted #6B582D;
+}
+
+.profile_container {
+    width:100%;
+    position: relative;
+    color: white;
+}
+
+#profile-card {
+    padding-top: 10%;
+}
+
+#title {
+    position: absolute;
+    text-align: right;
+    right: 30px;
+    top: 0px;
+}
+
+#description {
+    position: relative;
+    top: 20px;
+}
+
+#app-info {
+    background-color: black;
+    font-family: 'Yatra One', cursive;
+}

@@ -1,0 +1,95 @@
+html {
+    height: 100%;
+}
+
+.project {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#header {
+    width: 100%;
+    background-color: #ffd5d6;
+    z-index: 100;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+#header a {
+    color: #66033c;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.bodystyle {
+    background: #009899;
+}
+
+
+#BBpost {
+    margin: 0 auto;
+}
+
+.graph {
+    position:relative;
+    width: 100%;
+    background: #0080FF;
+    border-style: solid;
+    border: dotted 5px;
+    border-color: black;
+    margin-bottom:25px;
+    z-index:25;
+}
+
+#xLabelArea {
+    position: relative;
+    bottom: 10px;
+    height: 20px;
+    width: 100%;
+}
+
+.xLabel {
+    position: absolute;
+    top: 7px;
+    font-size: 13px;
+    color:white;
+}
+
+/*Rectangle bar class styling*/
+
+.bar {
+  fill: #f9027d;
+  stroke: black;
+  stroke-width: 5;
+}
+
+.bar:hover {
+  fill: #a82d42;
+}
+
+/*Dot class styling*/
+
+.dot {
+    stroke: black;
+    stroke-width: 5;
+    border-radius: 50%;
+}
+
+/*Line class styling*/
+
+.line {
+    stroke-width: 5;
+    border-radius: 50%;
+}
+
+.bar:hover {
+  fill: #a82d42;
+}
+
+/*Text class styling*/
+
+.text {
+  fill: white;
+  font-family: sans-serif;
+}

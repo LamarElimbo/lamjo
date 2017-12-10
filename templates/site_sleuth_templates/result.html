@@ -1,0 +1,111 @@
+{% extends "_skeleton_template.html" %}
+{% block title %}Lamar's Web Apps - Site Sleuth{% endblock %}
+{% block content %}
+<div class="info-pulse"></div>
+
+<div class="container">
+    <br>
+    <div class="row justify-content-between">
+        <div class="col-xs-12 col-md-4 align-self-start">
+            <div>
+                <br><br>
+                <img src="../../static/site_sleuth_static/crest.png" id='crest'>
+                <br>
+                <div id='property'><p><font style='color:#6B582D;'>RESTRICTED USER ACCESS </font><font style='color:white;'>| PROPERTY OF SITE SLEUTH</font></div>
+                <br>
+                <input type='textarea' id='search-bar' form='textform' name='website' placeholder="ENTER A WEBSITE URL">
+                <form action="{{ url_for('site_sleuth_result')}}" id='textform' method='post'>
+                    <button type="submit" id='submitButton' form='textform'><img src="../../static/site_sleuth_static/search.png" id='search-image'></button>
+                </form>
+                <div id="samples">
+                    <div class="col-xs-12 col-md">
+                        <div class="sample-button" title="http://www.lamartalkscode.com/">SAMPLE</div>
+                    </div>
+                    <div class="col-xs-12 col-md">
+                        <div class="sample-button" title="http://www.ted.com/">SAMPLE</div>
+                    </div>
+                    <div class="col-xs-12 col-md">
+                        <div class="sample-button" title="http://www.last.fm/">SAMPLE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-11 col-md-6" id='profile-card'>
+        {% for website in requiredInfo %}
+
+                <div class="infoBox" id='title'>
+                    <h1>{{website['Title']}}</h1>
+                    <p><a href={{site}}>{{website['Website']}}</a></p>
+                    <p>Alexa Score | {{website['Alexa Score']}}</p>
+                    <p>
+                        {% if socials != [('No socials found.', 'None')] %}
+                            {% for social in website['Socials'] %}
+                                <a href="{{social[0]}}"><img class='socials' src='../../static/site_sleuth_static/logos/{{social[1]}}.png'></a>
+                            {% endfor %}
+                        {% else %}
+                            <br>
+                        {% endif %}
+                    </p>
+                </div>
+                <div id='logo'><img src="{{website['Icon']}}"></div>
+                <div class="infoBox" id="description">
+                    <h3>Site Description</h3>
+                    <p>{{website['Description']}}</p>
+                </div>
+                <div class="infoBox" id='keywords'>
+                    <h3>Keywords</h3>
+                    <p><i>
+                        {% for keyword in website['Keywords'] %}
+                            {% if keyword == 'No keywords found.'%}
+                                {{keyword}}
+                            {% else %}
+                                #{{keyword}}
+                            {% endif %}
+                        {% endfor %}
+                    </i></p>
+                </div>
+                <div class="infoBox" id="name">
+                    <h3>Admin</h3>
+                    <p>{{website["Admin's Name"]}}</p>
+                </div>
+                <div id="adminPic"></div>
+                <div id="address">
+                    <div class="infoBox">
+                        <h3>Address</h3>
+                        <p>{{website['Address']}}</p>
+                    </div>
+                    <div class="infoBox">
+                        <p>{{website['City']}} | {{website['State']}} | {{website['Country']}}</p>
+                    </div>
+                </div>
+                <div class="infoBox" id="timezone">
+                    <h3>Timezone</h3>
+                    <p>{{website['Timezone ID']}} | {{website['Timezone Name']}}</p>
+                </div>
+                <div class="infoBox" id="contact">
+                    <h3>Contact</h3>
+                    <p>{{website['Phone']}} | <img height=18px src={{email}}></p>
+                </div>
+            </div><br><br><br>
+        {% endfor %}
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-md-8 info-panel" id="app-info">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <p>Site Sleuth is a proprietary software, developed by the world renowned data detective, Lamar Johnson. It is the central hub for all of your need-to-know website sleuthing needs! If you're looking for some background info on a website, submit a URL and see what you can uncover.</p>
+            </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+        $(".info-pulse").click(function(){
+            $(".info-panel").show(500);
+        });
+    });
+    </script>
+    <script src="../static/site_sleuth_static/sample_website.js"></script>
+    <div class="row">
+        <div class="col" id="bottom-buffer"></div>
+    </div>
+{% endblock %}

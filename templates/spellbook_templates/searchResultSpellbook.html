@@ -1,0 +1,75 @@
+{% extends "_skeleton_template.html" %}
+{% block title %}Lamar's Web Apps - Spellbook{% endblock %}
+{% block content %}
+<div class="info-pulse"></div>
+
+<div class="container">
+    <br>
+    <div class="row justify-content-between">
+        <div class="col-xs-12 col-md-4 align-self-start">
+            <div>
+                <br><br>
+                <img src="../../static/spellbook_static/crest.png" id='crest'>
+                <br>
+                <input type='textarea' id='search-bar' form='textform' name='desire' placeholder="Reveal your desire">
+                <form action="{{ url_for('spellbook_result')}}" id='textform' method='post'>
+                    <button type="submit" id='submitButton' form='textform'><img src="../../static/spellbook_static/search.png" id='search-image'></button>
+                </form>
+                <div id="samples">
+                    <div class="col-xs-12 col-md">
+                        <div class="sample-button" title="I want to find love.">SAMPLE</div>
+                    </div>
+                    <div class="col-xs-12 col-md">
+                        <div class="sample-button" title="I want to be lucky.">SAMPLE</div>
+                    </div>
+                    <div class="col-xs-12 col-md">
+                        <div class="sample-button" title="I want to be beautiful.">SAMPLE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-11 col-md-6" id='profile-card'>
+            {% if spellInfo == None %}
+                <center>Unfortunately, it seems that there are stonger forces than I preventing you from getting what you're looking for.</center>
+            {% else %}
+                {% for spell in spellInfo %}
+                    <div class="profile_container">
+                        <h1>{{spell[1]}}</h1>
+                        <p>{{spell[4]}}</p>
+                        <p><i>{{spell[3]}}</i></p>
+                        <p><b>{{spell[5]}}</b></p>
+                    </div>
+                    <div id='divider'></div><br><br>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-md-8 info-panel" id="app-info">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong><font style='color:red;'>Warning!</font> This digital spellbook is not a toy for you to play with.</strong>
+            <br><br>
+            <p>Heed my warning and hear my plea<br>For using the spells in this collection might not come free</p>
+            <br>
+            <p>It was not too long in the distant past<br>When a powerful warlock a wicked spell did cast</p>
+            <br>
+            <p>So if you are not one of the few pure of heart<br>It is better now that you bid adieu and part</p>
+            <br>
+            <p>It is Lamar who decides whether you are deserving<br>And he can also tell if you're just posing</p>
+            <br>
+            <p>So before deciding to cast one of these spells<br>Consider whether or not you're prepared for an eternity in hell</p>
+            <p>...</p>
+            <p>And if you are pure of heart then input your most craved desire and, just like magic, a spell suited for your needs might just heed your plead.</p>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+        $(".info-pulse").click(function(){
+            $(".info-panel").show(500);
+        });
+    });
+    </script>
+    <script src="../../static/spellbook_static/sample_search.js"></script>
+</div>
+{% endblock %}

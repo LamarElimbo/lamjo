@@ -1,0 +1,314 @@
+{% extends "_skeleton_template.html" %}
+{% block title %}Lamar's Web Apps - Flask{% endblock %}
+{% block content %}
+<div id="content-box">
+
+    <div class="row justify-content-between">
+         <div class="col-xs-11 col-md" id='starter-left'>
+             <div class="personal-info-box">
+                 <div id="agent">AGENT PROFILE: JOHNSON, LAMAR W.</div>
+             </div><br>
+             <div class="personal-info-box">
+                <div class="personal-info-label">[CODE NAME]</div>
+                <div class="personal-info-info">DATA DETECTIVE</div>
+             </div>
+             <div class="personal-info-box">
+                <div class="personal-info-label">[STATUS]</div>
+                <div class="personal-info-info">TOP ASSET</div>
+             </div>
+             <div class="personal-info-box">
+                <div class="personal-info-label">[SEX]</div>
+                <div class="personal-info-info">MALE</div>
+             </div>
+             <div class="personal-info-box">
+                <div class="personal-info-label">[AGE]</div>
+                <div class="personal-info-info">24</div>
+             </div>
+             <div class="personal-info-box">
+                <div class="personal-info-label">[D.O.B.]</div>
+                <div class="personal-info-info">SEPT 7, 1993</div>
+             </div>
+             <div class="personal-info-box">
+                <div class="personal-info-label">[MYERS BRIGGS]</div>
+                <div class="personal-info-info">INTJ</div>
+             </div>
+             <div class="personal-info-box">
+                <div class="personal-info-label">[MARITAL STATUS]</div>
+                <div class="personal-info-info">SINGLE</div>
+             </div>
+
+             <div id='appearance'>
+                <div id='appearance-title'>APPEARANCE</div>
+                <img id="me" src="../../static/home_static/me_blue.png">
+                <div id="appearance-box-area">
+                    <div class="appearance-box">
+                        <div class="appearance-box-label">EYE COLOUR</div>
+                        <div class="appearance-box-info" id='eye'></div>
+                    </div>
+                    <div class="appearance-box">
+                        <div class="appearance-box-label">HAIR COLOUR</div>
+                        <div class="appearance-box-info" id='hair1'></div>
+                        <div class="appearance-box-info" id='hair2'></div>
+                    </div>
+                    <div class="appearance-box">
+                        <div class="appearance-box-label">HEIGHT</div>
+                        <div class="appearance-box-info">5 FT 10</div>
+                    </div>
+                    <div class="appearance-box">
+                        <div class="appearance-box-label">WEIGHT</div>
+                        <div class="appearance-box-info">154 lbs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-11 col-md" id='starter-right'>
+            <div id='socials-title'>SOCIALS</div>
+            <div id="social-box-area">
+                <a href="home2" data-toggle="tooltip" data-placement="right" title="Soon to come!"><img class='logo' src="../../static/home_static/lajohn.png"></a>
+                <a href="http://www.lamartalkscode.com/" data-toggle="tooltip" data-placement="right" title="My blog: LamarTalksCode.com"><img class='logo' src="../../static/home_static/blog.png"></a>
+                <a href="https://github.com/lamar133/" data-toggle="tooltip" data-placement="right" title="@lamar133"><img class='logo' src="../../static/home_static/github.png"></a>
+                <a href="https://www.linkedin.com/in/lamar-johnson/" data-toggle="tooltip" data-placement="right" title="@lamar-johnson"><img class='logo' src="../../static/home_static/linkedin.png"></a>
+                <a href="https://twitter.com/_lamjo/" data-toggle="tooltip" data-placement="right" title="@_lamjo"><img class='logo' src="../../static/home_static/twitter.png"></a>
+                <a href="http://an-idealme.tumblr.com/" data-toggle="tooltip" data-placement="right" title="@an-idealme"><img class='logo' src="../../static/home_static/tumblr.png"></a>
+            </div>
+            <div id='map-area'>
+                <img id="map" src="../../static/home_static/map.png">
+                <div id='current-location' data-toggle="tooltip" data-placement="right" title="Toronto"></div>
+                
+                <div class='nationalities' data-toggle="tooltip" data-placement="right" title="Jamaica" id="jamaica"></div>
+                <div class='nationalities' data-toggle="tooltip" data-placement="right" title="Italy" id="italy"></div>
+                <div class='nationalities' data-toggle="tooltip" data-placement="right" title="Czechia" id="czech"></div>
+                <div class='nationalities' data-toggle="tooltip" data-placement="right" title="Croatia" id="croatia"></div>
+
+                <div class='visited' data-toggle="tooltip" data-placement="right" title="Jamaica" id="jamaica"></div>
+                <div class='visited' data-toggle="tooltip" data-placement="right" title="Italy" id="italy"></div>
+                <div class='visited' data-toggle="tooltip" data-placement="right" title="Czechia" id="czech"></div>
+                <div class='visited' data-toggle="tooltip" data-placement="right" title="Dominican Republic" id="dominican"></div>
+                <div class='visited' data-toggle="tooltip" data-placement="right" title="Cuba" id="cuba"></div>
+
+                <img id="icon-current-location" src="../../static/home_static/locate_red.png" data-toggle="tooltip" data-placement="right" title="Lamar's current location">
+                <img id="icon-nationalities" src="../../static/home_static/locate_gray.png" data-toggle="tooltip" data-placement="right" title="Lamar's nationalities">
+                <img id="icon-visited" src="../../static/home_static/locate_green.png" data-toggle="tooltip" data-placement="right" title="Countries Lamar has visited">
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col-xs-11 col-md-10">
+            <div id='languages-title'>LANGUAGES</div>
+            <div id="voicebox-area">
+                <img class='waves' src='../../static/home_static/sound.gif'>
+                <img class='waves' src='../../static/home_static/sound.gif'>
+                <img class='waves' src='../../static/home_static/sound.gif'>
+                <img class='waves' src='../../static/home_static/sound.gif'>
+            </div>
+            <div id="languages-area">
+                <div class="language">EN</div>
+                <div class="language">FR</div>
+                <div class="language">GE</div>
+                <div class="language">IT</div>
+            </div>
+        </div>
+    </div><br>
+    <div class="row justify-content-md-center">
+        <div class="col-xs-11 col-md-10">
+            <div id='academics-title'>ACADEMIC BACKGROUND</div>
+            <div id="academics-area">
+                <img id='york' src='../../static/home_static/york.png'>
+                <div class="academic-item" id="psychology">PSYCHOLOGY</div>
+                <div class="academic-item" id="neuroscience">NEUROSCIENCE</div>
+                <div class="academic-item" id="social-psych">SOCIAL PSYCHOLOGY</div>
+                <div class="academic-item" id="anatomy">ANATOMY</div>
+                <div class="academic-item" id="power-dynamics">SOCIAL POWER DYNAMICS</div>
+                <div class="academic-item" id="honour-roll">MEMBER OF DEAN'S HONOUR ROLL</div>
+                <div class="academic-item" id="linguistics">LINGUISTICS</div>
+                <div class="academic-item" id="neurolinguistics">NEUROLINGUISTICS</div>
+                <div class="academic-item" id="psycholinguistics">PSYCHOLINGUISTICS</div>
+                <div class="academic-item" id="discourse-analysis">DISCOURSE ANALYSIS</div>
+                
+                <div class="academic-connector" id="academic-connector-1"></div>
+                <div class="academic-connector" id="academic-connector-2"></div>
+                <div class="academic-connector" id="academic-connector-3"></div>
+                <div class="academic-connector" id="academic-connector-4"></div>
+                <div class="academic-connector" id="academic-connector-5"></div>
+                <div class="academic-connector" id="academic-connector-6"></div>
+                <div class="academic-connector" id="academic-connector-7"></div>
+            </div>
+        </div>
+    </div><br>
+    <div class="row justify-content-md-center">
+        <div class="col-xs-11 col-md-10">
+            <div id='volunteer-title'>VOLUNTEERISM</div>
+            <div id="volunteer-area">
+                <div class="volunteer-item" id="hospice">HOME HOSPICE CARE</div>
+                <div class="volunteer-item" id="terry-fox">TERRY FOX RUN OPERATION COORDINATOR</div>
+                <div class="volunteer-item" id="hotline">CRISIS HOTLINE RESPONDER</div>
+                
+                <div class="volunteer-item" id="date-2013">2013</div>
+                <div class="volunteer-item" id="date-2014">2014</div>
+                <div class="volunteer-item" id="date-2015">2015</div>
+                <div class="volunteer-item" id="date-2016">2016</div>
+                <div class="volunteer-item" id="date-2017">2017</div>
+                
+                <div class="volunteer-dot" id="volunteer-dot-1"></div>
+                <div class="volunteer-dot" id="volunteer-dot-2"></div>
+                <div class="volunteer-dot" id="volunteer-dot-3"></div>
+                <div class="volunteer-dot" id="volunteer-dot-4"></div>
+                <div class="volunteer-dot" id="volunteer-dot-5" data-toggle="tooltip" data-placement="right" title="Ongoing"></div>
+                
+                <div class="volunteer-connector" id="volunteer-connector-1"></div>
+                <div class="volunteer-connector" id="volunteer-connector-2"></div>
+            </div>
+        </div>
+    </div><br>
+    <div class="row justify-content-md-center">
+        <div class="col-xs-11 col-md-10">
+            <div id='stack-title'>TECH STACK + TOOLS</div>
+            <div id="stack-area">
+                <div class="stack-item-title" id="title-web-dev"> WEB DEVELOPMENT</div>
+                <div class="stack-item-title" id="title-drawing"> DATA DRAWING</div>
+                <div class="stack-item-title" id="title-ml-nltk">MACHINE LEARNING + NLTK</div>
+                <div class="stack-item-title" id="title-scripting">SCRIPTING/DATA ANALYSIS </div>
+                <div class="stack-item-title" id="title-apis">APIS </div>
+                
+                <div class="stack-item" id="web-dev">
+                    <br>
+                    <p>FLASK</p>
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JQUERY</p>
+                    <p>DJANGO</p>
+                </div>
+                <div class="stack-item" id="drawing">
+                    <br>
+                    <p>POWERPOINT</p>
+                    <p>TABLEAU</p>
+                    <p>BOKEH</p>
+                    <p>D3.JS</p>
+                    <p>HANDS</p>
+                </div>
+                <div class="stack-item" id="ml-nltk">
+                    <p>SENTIMENT ANALYSIS</p>
+                    <p>NAIVE BAYES (NB)</p>
+                    <p>MULTINOMIAL NB</p>
+                    <p>NAMED ENTITY REC</p>
+                    <p>KNN</p>
+                    <p>COLOUR QUANTIZATION</p>
+                    <p>K-MEANS</p>
+                    <p>SVM</p>
+                    <p>LINEAR REGRESSION</p>
+                    <p>LOGISTIC REGRESSION</p>
+                    <p>RANDOM FORESTS</p>
+                    <p>ANOVA</p>
+                </div>
+                <div class="stack-item" id="scripting">
+                    <br>
+                    <p>PYTHON</p>
+                    <p>NUMPY</p>
+                    <p>PANDAS</p>
+                    <p>EXCEL</p>
+                    <p>SQL</p>
+                </div>
+                <div class="stack-item" id="apis">
+                    <br>
+                    <p>TWITTER</p>
+                    <p>SPOTIFY</p>
+                    <p>YOUTUBE</p>
+                    <p>TUMBLR</p>
+                </div>
+                
+                <div class="stack-item-projects" id="web-dev-projects">
+                    <br>
+                    <p data-toggle="tooltip" data-placement="right" title="You're looking at it!">[LAMJO]</p>
+                    <a href="http://lamjo.pythonanywhere.com/site_sleuth_search"><p>[SLEUTH]</p></a>
+                    <a href="http://lamjo.pythonanywhere.com/spellbook_search"><p>[SPELLBOOK]</p></a>
+                    <a href="http://lamjo.pythonanywhere.com/scory_story_v2"><p>[SCORY 2]</p></a>
+                    <a href="http://lajohn.pythonanywhere.com/"><p>[LAJOHN]</p></a>
+                </div>
+                <div class="stack-item-projects" id="drawing-projects">
+                    <br>
+                    <a href="http://www.lamartalkscode.com/a-creatural-mosaic-ranked-for-success/"><p>[CREATURES]</p></a>
+                    <a href="http://www.lamartalkscode.com/an-investigation-into-ufo-sightings-in-the-us/"><p>[ALIENS]</p></a>
+                    <a href="http://www.lamartalkscode.com/dexter-v-death-row/"><p>[DEXTER]</p></a>
+                    <a href="http://www.lamartalkscode.com/the-global-peace-index-through-rainbow-coloured-glasses/"><p>[RAINBOWS]</p></a>
+                    <a href="http://www.lamartalkscode.com/learning-plots-with-project-runway/"><p>[FASHION]</p></a>
+                </div>
+                <div class="stack-item-projects" id="scripting-projects">
+                    <br>
+                    <a href="Behind the Scenes: Colour Quantization Using K-Means and Python"><p>[FOODIES]</p></a>
+                    <br><br>
+                    <a href="http://www.lamartalkscode.com/an-investigation-into-ufo-sightings-in-the-us/"><p>[ALIENS]</p></a>
+                    <a href="http://www.lamartalkscode.com/a-gilmore-girls-pop-culture-reference-analysis/"><p>[GILMORES]</p></a>
+                    <a href="http://www.lamartalkscode.com/storytime-dollhouse-and-the-relational-database/"><p>[DOLLHOUSE]</p></a>
+                </div>
+                <div class="stack-item-projects" id="apis-projects">
+                    <br>
+                    <a href="http://www.lamartalkscode.com/how-to-get-from-a-tweet-stream-to-a-real-time-sentiment-analyzing-graph/"><p>[BBUK]</p></a>
+                    <a href="http://lajohn.pythonanywhere.com/"><p>[TWATA]</p></a>
+                    <a href="http://lamjo.pythonanywhere.com/scory_story_v1"><p>[SCORY 1]</p></a>
+                    <p data-toggle="tooltip" data-placement="right" title="Soon to come!">[FASHBOARD]</p>
+                </div>
+                <div class="stack-connector" id="stack-connector-1"></div>
+                <div class="stack-connector" id="stack-connector-2"></div>
+                <div class="stack-connector" id="stack-connector-3"></div>
+                <div class="stack-connector" id="stack-connector-4"></div>
+                <div class="stack-connector" id="stack-connector-5"></div>
+                <div class="stack-connector" id="stack-connector-6"></div>
+                <div class="stack-connector" id="stack-connector-7"></div>
+                <div class="stack-connector" id="stack-connector-8"></div>
+                <div class="stack-connector" id="stack-connector-9"></div>
+                <div class="stack-connector" id="stack-connector-10"></div>
+                <div class="stack-connector" id="stack-connector-11"></div>
+                <div class="stack-connector" id="stack-connector-12"></div>
+                <div class="stack-connector" id="stack-connector-13"></div>
+                <div class="stack-connector" id="stack-connector-14"></div>
+                <div class="stack-connector" id="stack-connector-15"></div>
+                <div class="stack-connector" id="stack-connector-16"></div>
+                <div class="stack-connector" id="stack-connector-17"></div>
+                <div class="stack-connector" id="stack-connector-18"></div>
+                <div class="stack-connector" id="stack-connector-19"></div>
+                <div class="stack-connector" id="stack-connector-20"></div>
+            </div>
+        </div>
+    </div><br>
+    <div class="row">
+        <div class="col-xs-11 col-md-12" id='contact'>[LAMAR_JOHNSON133@YAHOO.CA]</div>
+    </div>
+    <br><br><br>
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        
+        $("#icon-current-location").click(function(){
+            $("#current-location").toggle(500);
+        });
+        $("#icon-nationalities").click(function(){
+            $("#jamaica.nationalities").toggle(500);
+        });
+        $("#icon-nationalities").click(function(){
+            $("#italy.nationalities").toggle(500);
+        });
+        $("#icon-nationalities").click(function(){
+            $("#czech.nationalities").toggle(500);
+        });
+        $("#icon-nationalities").click(function(){
+            $("#croatia.nationalities").toggle(500);
+        });
+        $("#icon-visited").click(function(){
+            $("#jamaica.visited").toggle(500);
+        });
+        $("#icon-visited").click(function(){
+            $("#italy.visited").toggle(500);
+        });
+        $("#icon-visited").click(function(){
+            $("#czech.visited").toggle(500);
+        });
+        $("#icon-visited").click(function(){
+            $("#dominican.visited").toggle(500);
+        });
+        $("#icon-visited").click(function(){
+            $("#cuba.visited").toggle(500);
+        });
+    });
+    </script>
+</div>
+{% endblock %}

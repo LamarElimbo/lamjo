@@ -1,0 +1,34 @@
+{% extends "_skeleton_template.html" %}
+{% block title %}Lamar's Web Apps - Site Sleuth{% endblock %}
+{% block content %}
+<div class="container">
+    <h1 class="page-header">Unfortunately, I couldn't dig up any dirt, but dont give up on me yet, just give me another case!</h1>
+    <div class="row">
+        <div class="col-xs-11 col-md-5 maintext">
+
+            <h2>Give me a try by selecting from one of the websites below...</h2><br>
+            <div>
+                <p><center><b class="sample_website">http://www.lamartalkscode.com/</b></center></p>
+                <p><center><b class="sample_website">http://www.hubba.com/</b></center></p>
+                <p><center><b class="sample_website">http://www.everynoise.com/</b></center></p>
+                <p><center><b class="sample_website">http://www.last.fm/</b></center></p>
+                <p><center><b class="sample_website">http://www.goodreads.com/</b></center></p>
+                <p><center><b class="sample_website">http://www.quora.com/</b></center></p>
+                <p><center><b class="sample_website">http://www.dictionary.com/</b></center></p>
+                <p><center><b class="sample_website">http://www.ted.com/</b></center></p>
+                <p><center><b class="sample_website">http://www.trendhunter.com/</b></center></p>
+                <p><center><b class="sample_website">http://www.flipboard.com/</b></center></p>
+            </div>
+        </div>
+
+        <div class="col-xs-11 col-md-5 maintext" style='position:absolute; right:7%;'>
+            <h2>...or enter a website or a list of websites separated by a comma here:</h2>
+            <textarea type='textarea' id='siteInput' form='textform' name='website'></textarea>
+            <form action="{{ url_for('site_sleuth_result')}}" id='textform' method='post'>
+              <input type="submit" id='submitButton' form='textform'>
+            </form>
+        </div>
+    </div>
+    <script src="../static/site_sleuth_static/sample_website.js"></script>
+</div>
+{% endblock %}

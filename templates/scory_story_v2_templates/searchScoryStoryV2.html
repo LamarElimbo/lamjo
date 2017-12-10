@@ -1,0 +1,52 @@
+{% extends "_skeleton_template.html" %}
+{% block title %}Lamar's Web Apps - Scory Story 2.0{% endblock %}
+{% block content %}
+<div class="info-pulse"></div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-xs-11 col-md-11">
+            <script>$(document).ready(function(){$("#storyButton1").click(function() {$.ajax({url : "../../static/scory_story_v2_static/stories/beauty_and_the_beast.txt",dataType: "text",success : function (data) {$("#storyInput").text(data);}});});$("#storyButton2").click(function() {$.ajax({url : "../../static/scory_story_v2_static/stories/cinderella.txt",dataType: "text",success : function (data) {$("#storyInput").text(data);}});});$("#storyButton3").click(function() {$.ajax({url : "../../static/scory_story_v2_static/stories/goldilocks.txt",dataType: "text",success : function (data) {$("#storyInput").text(data);}});});$("#storyButton4").click(function() {$.ajax({url : "../../static/scory_story_v2_static/stories/hansel_and_gretel.txt",dataType: "text",success : function (data) {$("#storyInput").text(data);}});});$("#storyButton5").click(function() {$.ajax({url : "../../static/scory_story_v2_static/stories/little_red.txt",dataType: "text",success : function (data) {$("#storyInput").text(data);}});});$("#storyButton6").click(function() {$.ajax({url : "../../static/scory_story_v2_static/stories/sleeping_beauty.txt",dataType: "text",success : function (data) {$("#storyInput").text(data);}});});$("#storyButton7").click(function() {$.ajax({url : "../../static/scory_story_v2_static/stories/snow_white.txt",dataType: "text",success : function (data) {$("#storyInput").text(data);}});});$("#storyButton8").click(function() {$.ajax({url : "../../static/scory_story_v2_static/stories/three_little_pigs.txt",dataType: "text",success : function (data) {$("#storyInput").text(data);}});});});</script>
+            <div id='startPhone'>
+                <div id='phoneArea'></div>
+                <div id='mobile'><img src="../../static/scory_story_v2_static/images/phone.png"></div>
+                <div id="storiesBox">
+                    <input type="button" value="Beauty & the Beast" class="storyButtons" id="storyButton1">
+                    <input type="button" value="Cinderella" class="storyButtons" id="storyButton2">
+                    <input type="button" value="Goldilocks" class="storyButtons" id="storyButton3">
+                    <input type="button" value="Hansel and Gretel" class="storyButtons" id="storyButton4">
+                    <input type="button" value="Red Riding Hood" class="storyButtons" id="storyButton5">
+                    <input type="button" value="Sleeping Beauty" class="storyButtons" id="storyButton6">
+                    <input type="button" value="Snow White" class="storyButtons" id="storyButton7">
+                    <input type="button" value="Three Little Pigs" class="storyButtons" id="storyButton8">
+                </div>
+                <div id="instructionBox">Choose a Fairy Tale above<br>OR<br>Paste Your own Story Below and Click the Submit Button</div>
+                <div id="mobileBox">
+                    <form action="{{ url_for('scory_story_v2_result')}}" id='textform' method='post'></form>
+                    <textarea id='storyInput' form='textform' name='sent'>Paste Your Story Here</textarea>
+                    <input type="submit" id='submitButton' form='textform'>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-xs-12 col-md-8 info-panel" id="app-info">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <p>Scory Story 2.0 is a program that automatically creates soundtracks for written works by analyzing a piece of text and implementing a multinomial Naive Bayes based algorithm to classify paragraphs into literary scenes (e.g., romance scene, fight scene, etc...).</p>
+            <p>An algorithm is used to blend paragraphs with similar genres together so that song change occurs at an appropriately decreased rate.</p><br><br>
+            <p><strong><u>Instructions</u></strong></p><br>
+            <p>1: Either click on a fairy tale or paste your own story, separated by paragraphs, in the iphone.</p>
+            <p>2: Click Submit</p>
+            <p>3: Wait for a few seconds to be redirected to a page where your story will be freshly accessorized with music scores (duration of analysis is correlated to the size of the story).</p>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+        $(".info-pulse").click(function(){
+            $(".info-panel").show(500);
+        });
+    });
+    </script>
+</div>
+{% endblock %}
