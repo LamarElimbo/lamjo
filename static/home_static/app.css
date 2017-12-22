@@ -693,52 +693,52 @@ body {
 
 .stack-item-title {
     position: absolute;
-    height: 25px;
+    height: 50px;
     color: #00B0F0;
     border: 1px solid #0070C0;
     border-radius: 0.3em;
     font-family: 'PT Mono', monospace;
     font-size: 12px;
+    display: table;
     text-align: center;
-    vertical-align: middle;
     background-color: rgba(180,25,155,0.25);
     padding-left: 2%;
     padding-right: 2%;
 }
 
+.stack-item-title p {
+    display: table-cell;
+    vertical-align: middle;
+}
+    
 #title-web-dev {
     top: 10%;
     left: 23%;
     width: 15%;
-    text-align: left;
 }
 
 #title-drawing {
-    bottom: 3%;
+    top: 550px;
     left: 23%;
     width: 15%;
-    text-align: left;
 }
 
 #title-ml-nltk {
     top: 10%;
     left: 40%;
     width: 20%;
-    height: 50px;
 }
 
 #title-scripting {
     top: 10%;
     right: 23%;
     width: 15%;
-    text-align: right;
 }
 
 #title-apis {
-    bottom: 3%;
+    top: 550px;
     right: 23%;
     width: 15%;
-    text-align: right;
 }
 
 .stack-item {
@@ -750,8 +750,14 @@ body {
     font-family: 'PT Mono', monospace;
     font-size: 14px;
     text-align: center;
+    display: table;
     vertical-align: middle;
     background-color: rgba(180,25,155,0.25);
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .hexagon img {
@@ -761,7 +767,7 @@ body {
 }
 
 #web-dev {
-    top: 15%;
+    top: 110px;
     left: 23%;
     width: 15%;
     height: 200px;
@@ -769,7 +775,7 @@ body {
 }
 
 #drawing {
-    top: 282px;
+    top: 343px;
     left: 23%;
     width: 15%;
     height: 200px;
@@ -780,13 +786,13 @@ body {
     top: 110px;
     left: 40%;
     width: 20%;
-    height: 400px;
+    height: 490px;
     background-color: rgba(255, 118, 54, 0.3);
     font-size: 12px;
 }
 
 #scripting {
-    top: 15%;
+    top: 110px;
     right: 23%;
     width: 15%;
     height: 200px;
@@ -794,7 +800,7 @@ body {
 }
 
 #apis {
-    top: 282px;
+    top: 343px;
     right: 23%;
     width: 15%;
     height: 200px;
@@ -850,4 +856,5 @@ body {
     color: #00B0F0;
     text-align: center;
     letter-spacing: 5px;
+    top: 500px;
 }
