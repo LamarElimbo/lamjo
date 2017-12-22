@@ -708,15 +708,15 @@ body {
 
 #title-web-dev {
     top: 10%;
-    left: 23%;
-    width: 15%;
+    left: 3%;
+    width: 30%;
     text-align: left;
 }
 
 #title-drawing {
     bottom: 3%;
-    left: 23%;
-    width: 15%;
+    left: 3%;
+    width: 30%;
     text-align: left;
 }
 
@@ -729,15 +729,15 @@ body {
 
 #title-scripting {
     top: 10%;
-    right: 23%;
-    width: 15%;
+    right: 3%;
+    width: 30%;
     text-align: right;
 }
 
 #title-apis {
     bottom: 3%;
-    right: 23%;
-    width: 15%;
+    right: 3%;
+    width: 30%;
     text-align: right;
 }
 
@@ -754,14 +754,8 @@ body {
     background-color: rgba(180,25,155,0.25);
 }
 
-.hexagon img {
-    position: absolute;
-    width: 70px; 
-    opacity: 0.4;
-}
-
 #web-dev {
-    top: 15%;
+    top: 13%;
     left: 23%;
     width: 15%;
     height: 200px;
@@ -769,7 +763,7 @@ body {
 }
 
 #drawing {
-    top: 282px;
+    top: 290px;
     left: 23%;
     width: 15%;
     height: 200px;
@@ -786,7 +780,7 @@ body {
 }
 
 #scripting {
-    top: 15%;
+    top: 13%;
     right: 23%;
     width: 15%;
     height: 200px;
@@ -794,7 +788,7 @@ body {
 }
 
 #apis {
-    top: 282px;
+    top: 290px;
     right: 23%;
     width: 15%;
     height: 200px;
@@ -843,6 +837,140 @@ body {
     top: 290px;
     right: 3%;
 }
+
+.stack-connector {
+    position: absolute;
+    border-right: 1px solid #0070C0;
+    border-bottom: 1px solid #0070C0;
+}
+
+#stack-connector-1 {
+    top: 100px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-2 {
+    top: 135px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-3 {
+    top: 172px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-4 {
+    top: 208px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-5 {
+    top: 246px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-6 {
+    top: 320px;
+    left: 17%;
+    width: 7%;
+}
+
+#stack-connector-7 {
+    top: 358px;
+    left: 17%;
+    width: 8%;
+}
+
+#stack-connector-8 {
+    top: 394px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-9 {
+    top: 431px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-10 {
+    top: 470px;
+    left: 17%;
+    width: 9%;
+}
+
+#stack-connector-11 {
+    top: 100px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-12 {
+    top: 100px;
+    left: 74%;
+    width: 5%;
+    height: 40px;
+}
+
+#stack-connector-13 {
+    top: 172px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-14 {
+    top: 208px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-15 {
+    top: 246px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-16 {
+    top: 320px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-17 {
+    top: 320px;
+    left: 81%;
+    width: 2%;
+    height: 40px;
+    border-left: 1px solid #0070C0;
+    border-right: 0px;
+}
+
+#stack-connector-18 {
+    top: 360px;
+    left: 74%;
+    width: 5%;
+    height: 35px;
+    border-bottom: 0px;
+    border-top: 1px solid #0070C0;
+}
+
+#stack-connector-19 {
+    top: 394px;
+    left: 74%;
+    width: 9%;
+}
+
+#stack-connector-20 {
+    top: 433px;
+    left: 74%;
+    width: 9%;
+}
+
 
 #contact {
     font-family: 'PT Mono', monospace;
