@@ -688,7 +688,6 @@ body {
     height: 500px;
     display: flex;
     justify-content:space-between;
-    border-top:  1px solid #0070C0;
 }
 
 .stack-item-title {
@@ -846,6 +845,34 @@ body {
     text-align: left;
     top: 290px;
     right: 3%;
+}
+
+.stack-connector {
+    position: absolute;
+}
+
+#stack-connector-1 {
+    border-left:  1px solid #0070C0;
+}
+
+#stack-connector-2 {
+    border-right:  1px solid #0070C0;
+}
+
+#stack-connector-3 {
+    border-bottom:  1px solid #0070C0;
+}
+
+#stack-connector-4 {
+    border-right:  1px solid #0070C0;
+}
+
+#stack-connector-5 {
+    border-left:  1px solid #0070C0;
+}
+
+#stack-connector-6 {
+    border-bottom:  1px solid #0070C0;
 }
 
 #contact {
