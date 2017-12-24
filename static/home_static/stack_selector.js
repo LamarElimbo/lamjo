@@ -1,7 +1,12 @@
 $(document).ready(function(){
+    
+    var connections = {
+        "dexter" : ["#stack-flask", "#stack-python"]
+    }
+        
     $("#hex-1").hover(function(){
-        $('#stack-flask').css("background-color", "red");
+        $(connections["dexter"].join(", ")).css({"color": "red"});
         }, function(){
-        $('#stack-flask').css("background-color", "blue");
+        $(connections["dexter"].join(", ")).css({"color": "#00B0F0"});
     });
 });
