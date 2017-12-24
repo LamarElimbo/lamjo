@@ -785,10 +785,124 @@ body {
     vertical-align: middle;
 }
 
-.hexagon img {
+.hexagon {
     position: absolute;
+}
+
+.hexagon img {
     width: 70px; 
     opacity: 0.4;
+}
+
+.hex-text {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    color: #00B0F0;
+    font-family: 'PT Mono', monospace;
+    font-size: 10px;
+    text-align: center;
+}
+
+#hex-1 {
+    left: 2%;
+    top: 10%;
+}
+
+#hex-2 {
+    left: 2%;
+    top: 27%;
+}
+
+#hex-3 {
+    left: 2%;
+    top: 44%;
+}
+
+#hex-4 {
+    left: 2%;
+    top: 61%;
+}
+
+#hex-5 {
+    left: 2%;
+    top: 78%;
+}
+
+#hex-6 {
+    left: 6%;
+    top: 18%;
+}
+
+#hex-7 {
+    left: 6%;
+    top: 35%;
+}
+
+#hex-8 {
+    left: 6%;
+    top: 52%;
+}
+
+#hex-9 {
+    left: 6%;
+    top: 69%;
+}
+
+#hex-10 {
+    left: 6%;
+    top: 86%;
+}
+
+#hex-11 {
+    right: 2%;
+    top: 10%;
+}
+
+#hex-12 {
+    right: 2%;
+    top: 27%;
+}
+
+#hex-13 {
+    right: 2%;
+    top: 44%;
+}
+
+#hex-14 {
+    right: 2%;
+    top: 61%;
+}
+
+#hex-15 {
+    right: 2%;
+    top: 78%;
+}
+
+#hex-16 {
+    right: 6%;
+    top: 18%;
+}
+
+#hex-17 {
+    right: 6%;
+    top: 35%;
+}
+
+#hex-18 {
+    right: 6%;
+    top: 52%;
+}
+
+#hex-19 {
+    right: 6%;
+    top: 69%;
+}
+
+#hex-20 {
+    right: 6%;
+    top: 86%;
 }
 
 #web-dev {
