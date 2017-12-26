@@ -56,10 +56,266 @@ $(document).ready(function(){
         "stack_youtube" : ["#hex-scory1", "#hex-lamjo"],
         "stack_tumblr" : ["#hex-fashboard", "#hex-twata"],
     }
+    
+    $(".hex-red").hide();
         
-    $("#hex-dexter").hover(function(){
-        $(project_connections["hex_dexter"].join(", ")).css({"color": "red"});
-        }, function(){
-        $(project_connections["hex_dexter"].join(", ")).css({"color": "#00B0F0"});
-    });
+    $(".hex-dexter").hover(
+        function(){
+            $(project_connections["hex_dexter"].join(", ")).css({"color": "#C00000"});
+            $("#dexter-red").show();
+            $("#dexter-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_dexter"].join(", ")).css({"color": "#00B0F0"});
+            $("#dexter-red").hide();
+            $("#dexter-blue").show();
+        }
+    );
+        
+    $(".hex-creatures").hover(
+        function(){
+            $(project_connections["hex_creatures"].join(", ")).css({"color": "#C00000"});
+            $("#creatures-red").show();
+            $("#creatures-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_creatures"].join(", ")).css({"color": "#00B0F0"});
+            $("#creatures-red").hide();
+            $("#creatures-blue").show();
+        }
+    );
+        
+    $(".hex-gilmores").hover(
+        function(){
+            $(project_connections["hex_gilmores"].join(", ")).css({"color": "#C00000"});
+            $("#gilmores-red").show();
+            $("#gilmores-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_gilmores"].join(", ")).css({"color": "#00B0F0"});
+            $("#gilmores-red").hide();
+            $("#gilmores-blue").show();
+        }
+    );
+        
+    $(".hex-aliens").hover(
+        function(){
+            $(project_connections["hex_aliens"].join(", ")).css({"color": "#C00000"});
+            $("#aliens-red").show();
+            $("#aliens-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_aliens"].join(", ")).css({"color": "#00B0F0"});
+            $("#aliens-red").hide();
+            $("#aliens-blue").show();
+        }
+    );
+        
+    $(".hex-schools").hover(
+        function(){
+            $(project_connections["hex_schools"].join(", ")).css({"color": "#C00000"});
+            $("#schools-red").show();
+            $("#schools-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_schools"].join(", ")).css({"color": "#00B0F0"});
+            $("#schools-red").hide();
+            $("#schools-blue").show();
+        }
+    );
+        
+    $(".hex-fashion").hover(
+        function(){
+            $(project_connections["hex_fashion"].join(", ")).css({"color": "#C00000"});
+            $("#fashion-red").show();
+            $("#fashion-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_fashion"].join(", ")).css({"color": "#00B0F0"});
+            $("#fashion-red").hide();
+            $("#fashion-blue").show();
+        }
+    );
+        
+    $(".hex-scory1").hover(
+        function(){
+            $(project_connections["hex_scory1"].join(", ")).css({"color": "#C00000"});
+            $("#scory1-red").show();
+            $("#scory1-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_scory1"].join(", ")).css({"color": "#00B0F0"});
+            $("#scory1-red").hide();
+            $("#scory1-blue").show();
+        }
+    );
+        
+    $(".hex-scory2").hover(
+        function(){
+            $(project_connections["hex_scory2"].join(", ")).css({"color": "#C00000"});
+            $("#scory2-red").show();
+            $("#scory2-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_scory2"].join(", ")).css({"color": "#00B0F0"});
+            $("#scory2-red").hide();
+            $("#scory2-blue").show();
+        }
+    );
+        
+    $(".hex-foodies").hover(
+        function(){
+            $(project_connections["hex_foodies"].join(", ")).css({"color": "#C00000"});
+            $("#foodies-red").show();
+            $("#foodies-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_foodies"].join(", ")).css({"color": "#00B0F0"});
+            $("#foodies-red").hide();
+            $("#foodies-blue").show();
+        }
+    );
+        
+    $(".hex-dollhouse").hover(
+        function(){
+            $(project_connections["hex_dollhouse"].join(", ")).css({"color": "#C00000"});
+            $("#dollhouse-red").show();
+            $("#dollhouse-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_dollhouse"].join(", ")).css({"color": "#00B0F0"});
+            $("#dollhouse-red").hide();
+            $("#dollhouse-blue").show();
+        }
+    );
+        
+    $(".hex-bbuk").hover(
+        function(){
+            $(project_connections["hex_bbuk"].join(", ")).css({"color": "#C00000"});
+            $("#bbuk-red").show();
+            $("#bbuk-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_bbuk"].join(", ")).css({"color": "#00B0F0"});
+            $("#bbuk-red").hide();
+            $("#bbuk-blue").show();
+        }
+    );
+        
+    $(".hex-mental-health").hover(
+        function(){
+            $(project_connections["hex_mental-health"].join(", ")).css({"color": "#C00000"});
+            $("#mental-health-red").show();
+            $("#mental-health-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_mental-health"].join(", ")).css({"color": "#00B0F0"});
+            $("#mental-health-red").hide();
+            $("#mental-health-blue").show();
+        }
+    );
+        
+    $(".hex-lgbt").hover(
+        function(){
+            $(project_connections["hex_lgbt"].join(", ")).css({"color": "#C00000"});
+            $("#lgbt-red").show();
+            $("#lgbt-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_lgbt"].join(", ")).css({"color": "#00B0F0"});
+            $("#lgbt-red").hide();
+            $("#lgbt-blue").show();
+        }
+    );
+        
+    $(".hex-sleuth").hover(
+        function(){
+            $(project_connections["hex_sleuth"].join(", ")).css({"color": "#C00000"});
+            $("#sleuth-red").show();
+            $("#sleuth-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_sleuth"].join(", ")).css({"color": "#00B0F0"});
+            $("#sleuth-red").hide();
+            $("#sleuth-blue").show();
+        }
+    );
+        
+    $(".hex-spellbook").hover(
+        function(){
+            $(project_connections["hex_spellbook"].join(", ")).css({"color": "#C00000"});
+            $("#spellbook-red").show();
+            $("#spellbook-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_spellbook"].join(", ")).css({"color": "#00B0F0"});
+            $("#spellbook-red").hide();
+            $("#spellbook-blue").show();
+        }
+    );
+        
+    $(".hex-lamjo").hover(
+        function(){
+            $(project_connections["hex_lamjo"].join(", ")).css({"color": "#C00000"});
+            $("#lamjo-red").show();
+            $("#lamjo-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_lamjo"].join(", ")).css({"color": "#00B0F0"});
+            $("#lamjo-red").hide();
+            $("#lamjo-blue").show();
+        }
+    );
+        
+    $(".hex-lajohn").hover(
+        function(){
+            $(project_connections["hex_lajohn"].join(", ")).css({"color": "#C00000"});
+            $("#lajohn-red").show();
+            $("#lajohn-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_lajohn"].join(", ")).css({"color": "#00B0F0"});
+            $("#lajohn-red").hide();
+            $("#lajohn-blue").show();
+        }
+    );
+        
+    $(".hex-twata").hover(
+        function(){
+            $(project_connections["hex_twata"].join(", ")).css({"color": "#C00000"});
+            $("#twata-red").show();
+            $("#twata-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_twata"].join(", ")).css({"color": "#00B0F0"});
+            $("#twata-red").hide();
+            $("#twata-blue").show();
+        }
+    );
+        
+    $(".hex-fashboard").hover(
+        function(){
+            $(project_connections["hex_fashboard"].join(", ")).css({"color": "#C00000"});
+            $("#fashboard-red").show();
+            $("#fashboard-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_fashboard"].join(", ")).css({"color": "#00B0F0"});
+            $("#fashboard-red").hide();
+            $("#fashboard-blue").show();
+        }
+    );
+        
+    $(".hex-clustr").hover(
+        function(){
+            $(project_connections["hex_clustr"].join(", ")).css({"color": "#C00000"});
+            $("#clustr-red").show();
+            $("#clustr-blue").hide();
+        },
+        function(){
+            $(project_connections["hex_clustr"].join(", ")).css({"color": "#00B0F0"});
+            $("#clustr-red").hide();
+            $("#clustr-blue").show();
+        }
+    );
 });

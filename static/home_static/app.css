@@ -792,6 +792,20 @@ body {
 .hexagon img {
     width: 70px; 
     opacity: 0.4;
+    z-index: 50;
+}
+.hex_red {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 70;
+}
+
+.hex_blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 70;
 }
 
 .hex-text {
@@ -803,105 +817,106 @@ body {
     font-family: 'PT Mono', monospace;
     font-size: 10px;
     text-align: center;
-    font-weight: bold
+    font-weight: bold;
+    z-index: 90;
 }
 
-#hex-dexter {
+.hex-dexter {
     left: 2%;
     top: 10%;
 }
 
-#hex-creatures {
+.hex-creatures {
     left: 2%;
     top: 27%;
 }
 
-#hex-gilmores {
+.hex-gilmores {
     left: 2%;
     top: 44%;
 }
 
-#hex-aliens {
+.hex-aliens {
     left: 2%;
     top: 61%;
 }
 
-#hex-schools {
+.hex-schools {
     left: 2%;
     top: 78%;
 }
 
-#hex-fashion {
+.hex-fashion {
     left: 6%;
     top: 18%;
 }
 
-#hex-scory1 {
+.hex-scory1 {
     left: 6%;
     top: 35%;
 }
 
-#hex-scory2 {
+.hex-scory2 {
     left: 6%;
     top: 52%;
 }
 
-#hex-foodies {
+.hex-foodies {
     left: 6%;
     top: 69%;
 }
 
-#hex-dollhouse {
+.hex-dollhouse {
     left: 6%;
     top: 86%;
 }
 
-#hex-bbuk {
+.hex-bbuk {
     right: 2%;
     top: 10%;
 }
 
-#hex-mental-health {
+.hex-mental-health {
     right: 2%;
     top: 27%;
 }
 
-#hex-lgbt {
+.hex-lgbt {
     right: 2%;
     top: 44%;
 }
 
-#hex-sleuth {
+.hex-sleuth {
     right: 2%;
     top: 61%;
 }
 
-#hex-spellbook {
+.hex-spellbook {
     right: 2%;
     top: 78%;
 }
 
-#hex-lamjo {
+.hex-lamjo {
     right: 6%;
     top: 18%;
 }
 
-#hex-lajohn {
+.hex-lajohn {
     right: 6%;
     top: 35%;
 }
 
-#hex-twata {
+.hex-twata {
     right: 6%;
     top: 52%;
 }
 
-#hex-fashboard {
+.hex-fashboard {
     right: 6%;
     top: 69%;
 }
 
-#hex-clustr {
+.hex-clustr {
     right: 6%;
     top: 86%;
 }
