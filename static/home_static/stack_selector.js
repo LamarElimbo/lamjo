@@ -36,7 +36,7 @@ $(document).ready(function(){
         "stack_hands" : ["#fashion-blue", "#scory1-blue", "#scory2-blue", "#schools-blue", "#bbuk-blue", "#mental-health-blue", "#lgbt-blue"],
         "stack_sentiment_analysis" : ["#bbuk-blue", "#twata-blue", "#lajohn-blue"],
         "stack_naive_bayes" : ["#scory1-blue", "#scory2-blue", "#bbuk-blue", "#lamjo-blue", "#lajohn-blue", "#twata-blue"],
-        "stack_multinomial_nb" : [],
+        "stack_sklearn" : ["#foodies-blue"],
         "stack_ner" : ["#gilmores-blue"],
         "stack_knn" : ["#foodies-blue"],
         "stack_colour_quantization" : ["#foodies-blue"],
@@ -45,7 +45,7 @@ $(document).ready(function(){
         "stack_linear_regression" : [],
         "stack_logistic_regression" : [],
         "stack_random_forests" : [],
-        "stack_anova" : [],
+        "stack_nltk" : ["#scory1-blue", "#scory2-blue", "#bbuk-blue", "#lamjo-blue", "#lajohn-blue", "#twata-blue"],
         "stack_python" : ["#dexter-blue", "#creatures-blue", "#scory1-blue", "#gilmores-blue", "#scory2-blue", "#aliens-blue", "#foodies-blue", "#schools-blue", "#twata-blue", "#bbuk-blue", "#lamjo-blue", "#mental-health-blue", "#lajohn-blue", "#lgbt-blue", "#twata-blue", "#sleuth-blue", "#fashboard-blue", "#spellbook-blue", "#clustr-blue"],
         "stack_numpy" : ["#foodies-blue"],
         "stack_pandas" : ["#dexter-blue", "#creatures-blue", "#scory1-blue", "#gilmores-blue", "#scory2-blue", "#foodies-blue", "#schools-blue", "#bbuk-blue", "#lamjo-blue", "#mental-health-blue", "#lajohn-blue", "#twata-blue", "#sleuth-blue", "#fashboard-blue", "#spellbook-blue", "#clustr-blue"],
@@ -70,7 +70,7 @@ $(document).ready(function(){
         "stack_hands" : ["#fashion-red", "#scory1-red", "#scory2-red", "#schools-red", "#bbuk-red", "#mental-health-red", "#lgbt-red"],
         "stack_sentiment_analysis" : ["#bbuk-red", "#twata-red", "#lajohn-red"],
         "stack_naive_bayes" : ["#scory1-red", "#scory2-red", "#bbuk-red", "#lamjo-red", "#lajohn-red", "#twata-red"],
-        "stack_multinomial_nb" : [],
+        "stack_sklearn" : ["#foodies-red"],
         "stack_ner" : ["#gilmores-red"],
         "stack_knn" : ["#foodies-red"],
         "stack_colour_quantization" : ["#foodies-red"],
@@ -79,7 +79,7 @@ $(document).ready(function(){
         "stack_linear_regression" : [],
         "stack_logistic_regression" : [],
         "stack_random_forests" : [],
-        "stack_anova" : [],
+        "stack_nltk" : ["#scory1-red", "#scory2-red", "#bbuk-red", "#lamjo-red", "#lajohn-red", "#twata-red"],
         "stack_python" : ["#dexter-red", "#creatures-red", "#scory1-red", "#gilmores-red", "#scory2-red", "#aliens-red", "#foodies-red", "#schools-red", "#twata-red", "#bbuk-red", "#lamjo-red", "#mental-health-red", "#lajohn-red", "#lgbt-red", "#twata-red", "#sleuth-red", "#fashboard-red", "#spellbook-red", "#clustr-red"],
         "stack_numpy" : ["#foodies-red"],
         "stack_pandas" : ["#dexter-red", "#creatures-red", "#scory1-red", "#gilmores-red", "#scory2-red", "#foodies-red", "#schools-red", "#bbuk-red", "#lamjo-red", "#mental-health-red", "#lajohn-red", "#twata-red", "#sleuth-red", "#fashboard-red", "#spellbook-red", "#clustr-red"],
@@ -509,16 +509,16 @@ $(document).ready(function(){
         }
     );
         
-    $("#stack-multinomial-naive-bayes").hover(
+    $("#stack-sklearn").hover(
         function(){
             $(this).css({"color": "#C00000"});
-            $(stack_connections_red["stack_multinomial_nb"].join(", ")).show();
-            $(stack_connections_blue["stack_multinomial_nb"].join(", ")).hide();
+            $(stack_connections_red["stack_sklearn"].join(", ")).show();
+            $(stack_connections_blue["stack_sklearn"].join(", ")).hide();
         },
         function(){
             $(this).css({"color": "#00B0F0"});
-            $(stack_connections_blue["stack_multinomial_nb"].join(", ")).show();
-            $(stack_connections_red["stack_multinomial_nb"].join(", ")).hide();
+            $(stack_connections_blue["stack_sklearn"].join(", ")).show();
+            $(stack_connections_red["stack_sklearn"].join(", ")).hide();
         }
     );
         
@@ -626,16 +626,16 @@ $(document).ready(function(){
         }
     );
         
-    $("#stack-anova").hover(
+    $("#stack-nltk").hover(
         function(){
             $(this).css({"color": "#C00000"});
-            $(stack_connections_red["stack_anova"].join(", ")).show();
-            $(stack_connections_blue["stack_anova"].join(", ")).hide();
+            $(stack_connections_red["stack_nltk"].join(", ")).show();
+            $(stack_connections_blue["stack_nltk"].join(", ")).hide();
         },
         function(){
             $(this).css({"color": "#00B0F0"});
-            $(stack_connections_blue["stack_anova"].join(", ")).show();
-            $(stack_connections_red["stack_anova"].join(", ")).hide();
+            $(stack_connections_blue["stack_nltk"].join(", ")).show();
+            $(stack_connections_red["stack_nltk"].join(", ")).hide();
         }
     );
         

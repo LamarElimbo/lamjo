@@ -821,6 +821,10 @@ body {
     z-index: 90;
 }
 
+a.hex-text:hover {
+    color: #f9027d;
+}
+
 .hex-dexter {
     left: 2%;
     top: 10%;
@@ -977,8 +981,8 @@ body {
     vertical-align: middle;
 }
 
-.stack-item-projects p {
-    cursor: pointer;
+.stack-item p {
+    cursor: default;
 }
 
 #web-dev-projects {
@@ -1057,5 +1061,5 @@ body {
     color: #00B0F0;
     text-align: center;
     letter-spacing: 5px;
-    top: 500px;
+    top: 50px;
 }
