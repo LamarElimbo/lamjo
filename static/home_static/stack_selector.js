@@ -21,41 +21,75 @@ $(document).ready(function(){
         "hex_fashboard" : ["#stack-django", "#stack-python", "#stack-tumblr", "#stack-html", "#stack-css", "#stack-jquery"],
         "hex_spellbook" : ["#stack-flask", "#stack-python", "#stack-html", "#stack-css", "#stack-jquery", "#stack-naive-bayes"],
         "hex_clustr" : ["#stack-django", "#stack-python", "#stack-html", "#stack-flask", "#stack-css", "#stack-jquery"],
-    }
+    };
     
-    var stack_connections = {
-        "stack_flask" : ["#hex-lamjo", "#hex-sleuth", "#hex-spellbook", "#hex-scory1", "#hex-scory2", "#hex-clustr"],
-        "stack_html" : ["#hex-lamjo", "#hex-sleuth", "#hex-spellbook", "#hex-scory1", "#hex-scory2", "#hex-clustr", "#hex-fashboard", "#hex-twata", "#hex-lajohn"],
-        "stack_css" : ["#hex-lamjo", "#hex-sleuth", "#hex-spellbook", "#hex-scory1", "#hex-scory2", "#hex-clustr", "#hex-fashboard", "#hex-twata", "#hex-lajohn"],
-        "stack_jquery" : ["#hex-lamjo", "#hex-sleuth", "#hex-spellbook", "#hex-scory1", "#hex-scory2", "#hex-clustr", "#hex-fashboard", "#hex-twata", "#hex-lajohn"],
-        "stack_django" : ["#hex-lajohn", "#hex-twata", "#hex-clustr"],
-        "stack_powerpoint" : ["#hex-creatures", "#hex-gilmores", "#hex-foodies", "#hex-schools", "#hex-dollhouse", "#hex-bbuk", "#hex-lamjo", "#hex-mental-health", "#hex-lajohn", "#hex-lgbt", "#hex-fashboard", "#hex-clustr"],
-        "stack_tableu" : ["#hex-dexter", "#hex-aliens"],
-        "stack_bokeh" : ["#hex-dexter"],
-        "stack_d3_js" : ["#hex-creatures", "#hex-lgbt"],
-        "stack_hands" : ["#hex-fashion", "#hex-scory1", "#hex-scory2", "#hex-schools", "#hex-bbuk", "#hex-mental-health", "#hex-lgbt"],
-        "stack_sentiment_analysis" : ["#hex-bbuk", "#hex-twata", "#hex-lajohn"],
-        "stack_naive_bayes" : ["#hex-scory1", "#hex-scory2", "#hex-bbuk", "#hex-lamjo", "#hex-lajohn", "#hex-twata"],
+    var stack_connections_blue = {
+        "stack_flask" : ["#lamjo-blue", "#sleuth-blue", "#spellbook-blue", "#scory1-blue", "#scory2-blue", "#clustr-blue"],
+        "stack_html" : ["#lamjo-blue", "#sleuth-blue", "#spellbook-blue", "#scory1-blue", "#scory2-blue", "#clustr-blue", "#fashboard-blue", "#twata-blue", "#lajohn-blue"],
+        "stack_css" : ["#lamjo-blue", "#sleuth-blue", "#spellbook-blue", "#scory1-blue", "#scory2-blue", "#clustr-blue", "#fashboard-blue", "#twata-blue", "#lajohn-blue"],
+        "stack_jquery" : ["#lamjo-blue", "#sleuth-blue", "#spellbook-blue", "#scory1-blue", "#scory2-blue", "#clustr-blue", "#fashboard-blue", "#twata-blue", "#lajohn-blue"],
+        "stack_django" : ["#lajohn-blue", "#twata-blue", "#clustr-blue"],
+        "stack_powerpoint" : ["#creatures-blue", "#gilmores-blue", "#foodies-blue", "#schools-blue", "#dollhouse-blue", "#bbuk-blue", "#lamjo-blue", "#mental-health-blue", "#lajohn-blue", "#lgbt-blue", "#fashboard-blue", "#clustr-blue"],
+        "stack_tableau" : ["#dexter-blue", "#aliens-blue"],
+        "stack_bokeh" : ["#dexter-blue"],
+        "stack_d3" : ["#creatures-blue", "#lgbt-blue"],
+        "stack_hands" : ["#fashion-blue", "#scory1-blue", "#scory2-blue", "#schools-blue", "#bbuk-blue", "#mental-health-blue", "#lgbt-blue"],
+        "stack_sentiment_analysis" : ["#bbuk-blue", "#twata-blue", "#lajohn-blue"],
+        "stack_naive_bayes" : ["#scory1-blue", "#scory2-blue", "#bbuk-blue", "#lamjo-blue", "#lajohn-blue", "#twata-blue"],
         "stack_multinomial_nb" : [],
-        "stack_ner" : ["#hex-gilmores"],
-        "stack_knn" : ["#hex-foodies"],
-        "stack_colour_quantization" : ["#hex-foodies"],
-        "stack_kmeans" : ["#hex-foodies"],
+        "stack_ner" : ["#gilmores-blue"],
+        "stack_knn" : ["#foodies-blue"],
+        "stack_colour_quantization" : ["#foodies-blue"],
+        "stack_kmeans" : ["#foodies-blue"],
         "stack_svm" : [],
         "stack_linear_regression" : [],
         "stack_logistic_regression" : [],
         "stack_random_forests" : [],
         "stack_anova" : [],
-        "stack_python" : ["#hex-dexter", "#hex-creatures", "#hex-scory1", "#hex-gilmores", "#hex-scory2", "#hex-aliens", "#hex-foodies", "#hex-schools", "#hex-twata", "#hex-bbuk", "#hex-lamjo", "#hex-mental-health", "#hex-lajohn", "#hex-lgbt", "#hex-twata", "#hex-sleuth", "#hex-fashboard", "#hex-spellbook", "#hex-clustr"],
-        "stack_numpy" : ["#hex-foodies"],
-        "stack_pandas" : ["#hex-dexter", "#hex-creatures", "#hex-scory1", "#hex-gilmores", "#hex-scory2", "#hex-foodies", "#hex-schools", "#hex-bbuk", "#hex-lamjo", "#hex-mental-health", "#hex-lajohn", "#hex-twata", "#hex-sleuth", "#hex-fashboard", "#hex-spellbook", "#hex-clustr"],
-        "stack_excel" : ["#hex-dexter", "#hex-creatures", "#hex-scory1", "#hex-gilmores", "#hex-scory2", "#hex-foodies", "#hex-schools", "#hex-bbuk", "#hex-lamjo", "#hex-mental-health", "#hex-lajohn", "#hex-twata", "#hex-sleuth", "#hex-fashboard", "#hex-spellbook", "#hex-clustr"],
-        "stack_sql" : ["#hex-bbuk", "#hex-dollhouse"],
-        "stack_twitter" : ["#hex-bbuk", "#hex-lamjo", "#hex-twata", "#hex-lajohn"],
-        "stack_spotify" : ["#hex-scory1", "#hex-lamjo"],
-        "stack_youtube" : ["#hex-scory1", "#hex-lamjo"],
-        "stack_tumblr" : ["#hex-fashboard", "#hex-twata"],
-    }
+        "stack_python" : ["#dexter-blue", "#creatures-blue", "#scory1-blue", "#gilmores-blue", "#scory2-blue", "#aliens-blue", "#foodies-blue", "#schools-blue", "#twata-blue", "#bbuk-blue", "#lamjo-blue", "#mental-health-blue", "#lajohn-blue", "#lgbt-blue", "#twata-blue", "#sleuth-blue", "#fashboard-blue", "#spellbook-blue", "#clustr-blue"],
+        "stack_numpy" : ["#foodies-blue"],
+        "stack_pandas" : ["#dexter-blue", "#creatures-blue", "#scory1-blue", "#gilmores-blue", "#scory2-blue", "#foodies-blue", "#schools-blue", "#bbuk-blue", "#lamjo-blue", "#mental-health-blue", "#lajohn-blue", "#twata-blue", "#sleuth-blue", "#fashboard-blue", "#spellbook-blue", "#clustr-blue"],
+        "stack_excel" : ["#dexter-blue", "#creatures-blue", "#scory1-blue", "#gilmores-blue", "#scory2-blue", "#foodies-blue", "#schools-blue", "#bbuk-blue", "#lamjo-blue", "#mental-health-blue", "#lajohn-blue", "#twata-blue", "#sleuth-blue", "#fashboard-blue", "#spellbook-blue", "#clustr-blue"],
+        "stack_sql" : ["#bbuk-blue", "#dollhouse-blue"],
+        "stack_twitter" : ["#bbuk-blue", "#lamjo-blue", "#twata-blue", "#lajohn-blue"],
+        "stack_spotify" : ["#scory1-blue", "#lamjo-blue"],
+        "stack_youtube" : ["#scory1-blue", "#lamjo-blue"],
+        "stack_tumblr" : ["#fashboard-blue", "#twata-blue"],
+    };
+    
+    var stack_connections_red = {
+        "stack_flask" : ["#lamjo-red", "#sleuth-red", "#spellbook-red", "#scory1-red", "#scory2-red", "#clustr-red"],
+        "stack_html" : ["#lamjo-red", "#sleuth-red", "#spellbook-red", "#scory1-red", "#scory2-red", "#clustr-red", "#fashboard-red", "#twata-red", "#lajohn-red"],
+        "stack_css" : ["#lamjo-red", "#sleuth-red", "#spellbook-red", "#scory1-red", "#scory2-red", "#clustr-red", "#fashboard-red", "#twata-red", "#lajohn-red"],
+        "stack_jquery" : ["#lamjo-red", "#sleuth-red", "#spellbook-red", "#scory1-red", "#scory2-red", "#clustr-red", "#fashboard-red", "#twata-red", "#lajohn-red"],
+        "stack_django" : ["#lajohn-red", "#twata-red", "#clustr-red"],
+        "stack_powerpoint" : ["#creatures-red", "#gilmores-red", "#foodies-red", "#schools-red", "#dollhouse-red", "#bbuk-red", "#lamjo-red", "#mental-health-red", "#lajohn-red", "#lgbt-red", "#fashboard-red", "#clustr-red"],
+        "stack_tableau" : ["#dexter-red", "#aliens-red"],
+        "stack_bokeh" : ["#dexter-red"],
+        "stack_d3" : ["#creatures-red", "#lgbt-red"],
+        "stack_hands" : ["#fashion-red", "#scory1-red", "#scory2-red", "#schools-red", "#bbuk-red", "#mental-health-red", "#lgbt-red"],
+        "stack_sentiment_analysis" : ["#bbuk-red", "#twata-red", "#lajohn-red"],
+        "stack_naive_bayes" : ["#scory1-red", "#scory2-red", "#bbuk-red", "#lamjo-red", "#lajohn-red", "#twata-red"],
+        "stack_multinomial_nb" : [],
+        "stack_ner" : ["#gilmores-red"],
+        "stack_knn" : ["#foodies-red"],
+        "stack_colour_quantization" : ["#foodies-red"],
+        "stack_kmeans" : ["#foodies-red"],
+        "stack_svm" : [],
+        "stack_linear_regression" : [],
+        "stack_logistic_regression" : [],
+        "stack_random_forests" : [],
+        "stack_anova" : [],
+        "stack_python" : ["#dexter-red", "#creatures-red", "#scory1-red", "#gilmores-red", "#scory2-red", "#aliens-red", "#foodies-red", "#schools-red", "#twata-red", "#bbuk-red", "#lamjo-red", "#mental-health-red", "#lajohn-red", "#lgbt-red", "#twata-red", "#sleuth-red", "#fashboard-red", "#spellbook-red", "#clustr-red"],
+        "stack_numpy" : ["#foodies-red"],
+        "stack_pandas" : ["#dexter-red", "#creatures-red", "#scory1-red", "#gilmores-red", "#scory2-red", "#foodies-red", "#schools-red", "#bbuk-red", "#lamjo-red", "#mental-health-red", "#lajohn-red", "#twata-red", "#sleuth-red", "#fashboard-red", "#spellbook-red", "#clustr-red"],
+        "stack_excel" : ["#dexter-red", "#creatures-red", "#scory1-red", "#gilmores-red", "#scory2-red", "#foodies-red", "#schools-red", "#bbuk-red", "#lamjo-red", "#mental-health-red", "#lajohn-red", "#twata-red", "#sleuth-red", "#fashboard-red", "#spellbook-red", "#clustr-red"],
+        "stack_sql" : ["#bbuk-red", "#dollhouse-red"],
+        "stack_twitter" : ["#bbuk-red", "#lamjo-red", "#twata-red", "#lajohn-red"],
+        "stack_spotify" : ["#scory1-red", "#lamjo-red"],
+        "stack_youtube" : ["#scory1-red", "#lamjo-red"],
+        "stack_tumblr" : ["#fashboard-red", "#twata-red"],
+    };
     
     $(".hex-red").hide();
         
@@ -316,6 +350,409 @@ $(document).ready(function(){
             $(project_connections["hex_clustr"].join(", ")).css({"color": "#00B0F0"});
             $("#clustr-red").hide();
             $("#clustr-blue").show();
+        }
+    );
+        
+    $("#stack-flask").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_flask"].join(", ")).show();
+            $(stack_connections_blue["stack_flask"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_flask"].join(", ")).show();
+            $(stack_connections_red["stack_flask"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-html").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_html"].join(", ")).show();
+            $(stack_connections_blue["stack_html"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_html"].join(", ")).show();
+            $(stack_connections_red["stack_html"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-css").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_css"].join(", ")).show();
+            $(stack_connections_blue["stack_css"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_css"].join(", ")).show();
+            $(stack_connections_red["stack_css"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-jquery").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_jquery"].join(", ")).show();
+            $(stack_connections_blue["stack_jquery"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_jquery"].join(", ")).show();
+            $(stack_connections_red["stack_jquery"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-django").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_django"].join(", ")).show();
+            $(stack_connections_blue["stack_django"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_django"].join(", ")).show();
+            $(stack_connections_red["stack_django"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-powerpoint").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_powerpoint"].join(", ")).show();
+            $(stack_connections_blue["stack_powerpoint"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_powerpoint"].join(", ")).show();
+            $(stack_connections_red["stack_powerpoint"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-tableau").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_tableau"].join(", ")).show();
+            $(stack_connections_blue["stack_tableau"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_tableau"].join(", ")).show();
+            $(stack_connections_red["stack_tableau"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-bokeh").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_bokeh"].join(", ")).show();
+            $(stack_connections_blue["stack_bokeh"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_bokeh"].join(", ")).show();
+            $(stack_connections_red["stack_bokeh"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-d3").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_d3"].join(", ")).show();
+            $(stack_connections_blue["stack_d3"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_d3"].join(", ")).show();
+            $(stack_connections_red["stack_d3"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-hands").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_hands"].join(", ")).show();
+            $(stack_connections_blue["stack_hands"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_hands"].join(", ")).show();
+            $(stack_connections_red["stack_hands"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-sentiment-analysis").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_sentiment_analysis"].join(", ")).show();
+            $(stack_connections_blue["stack_sentiment_analysis"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_sentiment_analysis"].join(", ")).show();
+            $(stack_connections_red["stack_sentiment_analysis"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-naive-bayes").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_naive_bayes"].join(", ")).show();
+            $(stack_connections_blue["stack_naive_bayes"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_naive_bayes"].join(", ")).show();
+            $(stack_connections_red["stack_naive_bayes"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-multinomial-naive-bayes").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_multinomial_nb"].join(", ")).show();
+            $(stack_connections_blue["stack_multinomial_nb"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_multinomial_nb"].join(", ")).show();
+            $(stack_connections_red["stack_multinomial_nb"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-named-entity-rec").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_ner"].join(", ")).show();
+            $(stack_connections_blue["stack_ner"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_ner"].join(", ")).show();
+            $(stack_connections_red["stack_ner"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-knn").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_knn"].join(", ")).show();
+            $(stack_connections_blue["stack_knn"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_knn"].join(", ")).show();
+            $(stack_connections_red["stack_knn"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-colour-quantization").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_colour_quantization"].join(", ")).show();
+            $(stack_connections_blue["stack_colour_quantization"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_colour_quantization"].join(", ")).show();
+            $(stack_connections_red["stack_colour_quantization"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-k-means").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_kmeans"].join(", ")).show();
+            $(stack_connections_blue["stack_kmeans"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_kmeans"].join(", ")).show();
+            $(stack_connections_red["stack_kmeans"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-svm").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_svm"].join(", ")).show();
+            $(stack_connections_blue["stack_svm"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_svm"].join(", ")).show();
+            $(stack_connections_red["stack_svm"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-linear-regression").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_linear_regression"].join(", ")).show();
+            $(stack_connections_blue["stack_linear_regression"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_linear_regression"].join(", ")).show();
+            $(stack_connections_red["stack_linear_regression"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-logistic-regression").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_logistic_regression"].join(", ")).show();
+            $(stack_connections_blue["stack_logistic_regression"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_logistic_regression"].join(", ")).show();
+            $(stack_connections_red["stack_logistic_regression"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-random-forests").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_random_forests"].join(", ")).show();
+            $(stack_connections_blue["stack_random_forests"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_random_forests"].join(", ")).show();
+            $(stack_connections_red["stack_random_forests"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-anova").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_anova"].join(", ")).show();
+            $(stack_connections_blue["stack_anova"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_anova"].join(", ")).show();
+            $(stack_connections_red["stack_anova"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-python").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_python"].join(", ")).show();
+            $(stack_connections_blue["stack_python"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_python"].join(", ")).show();
+            $(stack_connections_red["stack_python"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-numpy").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_numpy"].join(", ")).show();
+            $(stack_connections_blue["stack_numpy"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_numpy"].join(", ")).show();
+            $(stack_connections_red["stack_numpy"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-pandas").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_pandas"].join(", ")).show();
+            $(stack_connections_blue["stack_pandas"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_pandas"].join(", ")).show();
+            $(stack_connections_red["stack_pandas"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-excel").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_excel"].join(", ")).show();
+            $(stack_connections_blue["stack_excel"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_excel"].join(", ")).show();
+            $(stack_connections_red["stack_excel"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-sql").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_sql"].join(", ")).show();
+            $(stack_connections_blue["stack_sql"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_sql"].join(", ")).show();
+            $(stack_connections_red["stack_sql"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-twitter").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_twitter"].join(", ")).show();
+            $(stack_connections_blue["stack_twitter"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_twitter"].join(", ")).show();
+            $(stack_connections_red["stack_twitter"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-spotify").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_spotify"].join(", ")).show();
+            $(stack_connections_blue["stack_spotify"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_spotify"].join(", ")).show();
+            $(stack_connections_red["stack_spotify"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-youtube").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_youtube"].join(", ")).show();
+            $(stack_connections_blue["stack_youtube"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_youtube"].join(", ")).show();
+            $(stack_connections_red["stack_youtube"].join(", ")).hide();
+        }
+    );
+        
+    $("#stack-tumblr").hover(
+        function(){
+            $(this).css({"color": "#C00000"});
+            $(stack_connections_red["stack_tumblr"].join(", ")).show();
+            $(stack_connections_blue["stack_tumblr"].join(", ")).hide();
+        },
+        function(){
+            $(this).css({"color": "#00B0F0"});
+            $(stack_connections_blue["stack_tumblr"].join(", ")).show();
+            $(stack_connections_red["stack_tumblr"].join(", ")).hide();
         }
     );
 });
