@@ -112,8 +112,9 @@ body {
 
 #appearance-box-area {
     position: absolute;
-    right:0;
-    top:5px;
+    left: 150px;
+    top: 5px;
+    width: 60%;
     margin-right: 10px;
     margin-left: 10px;
 }
@@ -122,14 +123,15 @@ body {
     position: relative;
     top: 15px;
     margin: 7px;
-    width: 200px;
+    width: 90%;
     height: 35px;
+    display: table;
 }
 
 .appearance-box-label {
     position: absolute;
     left: 0;
-    width: 45%;
+    width: 40%;
     height: 100%;
     border: 1px solid #0070C0;
     border-radius: 0.5em;
@@ -140,11 +142,12 @@ body {
     text-align: center;
     line-height: 35px;
     vertical-align: middle;
+    display: table-cell;
 }
 
 .appearance-box-info {
     position: absolute;
-    right: 0;
+    left: 50%;
     width: 45%;
     height: 100%;
     border: 1px solid #0070C0;
@@ -156,6 +159,7 @@ body {
     text-align: center;
     line-height: 35px;
     vertical-align: middle;
+    display: table-cell;
 }
 
 #eye {
@@ -165,12 +169,12 @@ body {
 #hair1 {
     background-color: #24181A;
     width: 20%;
-    right: 25%;
 }
 
 #hair2 {
     background-color: #998E9B;
     width: 20%;
+    left: 75%;
 }
 
 #map-area {
