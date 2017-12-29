@@ -768,13 +768,13 @@ body {
     
 #title-web-dev {
     top: 63px;
-    left: 20%;
+    left: 19.5%;
     width: 20%;
 }
 
 #title-drawing {
     top: 545px;
-    left: 20%;
+    left: 19.5%;
     width: 20%;
 }
 
@@ -786,13 +786,13 @@ body {
 
 #title-scripting {
     top: 63px;
-    right: 20%;
+    right: 19.5%;
     width: 20%;
 }
 
 #title-apis {
     top: 545px;
-    right: 20%;
+    right: 19.5%;
     width: 20%;
 }
 
@@ -955,7 +955,7 @@ a.hex-text:hover {
 
 #web-dev {
     top: 125px;
-    left: 20%;
+    left: 19.5%;
     width: 20%;
     height: 200px;
     background-color: rgba(255, 54, 224, 0.3);
@@ -963,7 +963,7 @@ a.hex-text:hover {
 
 #drawing {
     top: 333px;
-    left: 20%;
+    left: 19.5%;
     width: 20%;
     height: 200px;
     background-color: rgba(255, 192, 0, 0.3);
@@ -980,7 +980,7 @@ a.hex-text:hover {
 
 #scripting {
     top: 125px;
-    right: 20%;
+    right: 19.5%;
     width: 20%;
     height: 200px;
     background-color: rgba(0, 56, 77, 0.7);
@@ -988,7 +988,7 @@ a.hex-text:hover {
 
 #apis {
     top: 333px;
-    right: 20%;
+    right: 19.5%;
     width: 20%;
     height: 200px;
     background-color: rgba(0, 176, 80, 0.3);
