@@ -20,7 +20,7 @@ $(document).ready(function(){
         "hex_sleuth" : ["#stack-flask", "#stack-python", "#stack-html", "#stack-css", "#stack-jquery"],
         "hex_fashboard" : ["#stack-django", "#stack-python", "#stack-tumblr", "#stack-html", "#stack-css", "#stack-jquery"],
         "hex_spellbook" : ["#stack-flask", "#stack-python", "#stack-html", "#stack-css", "#stack-jquery", "#stack-naive-bayes"],
-        "hex_clustr" : ["#stack-django", "#stack-python", "#stack-html", "#stack-flask", "#stack-css", "#stack-jquery"],
+        "hex_clustr" : ["#stack-django", "#stack-python", "#stack-html", "#stack-flask", "#stack-css", "#stack-jquery", "#stack-sql"],
     };
     
     var stack_connections_blue = {
@@ -50,7 +50,7 @@ $(document).ready(function(){
         "stack_numpy" : ["#foodies-blue"],
         "stack_pandas" : ["#dexter-blue", "#creatures-blue", "#scory1-blue", "#gilmores-blue", "#scory2-blue", "#foodies-blue", "#schools-blue", "#bbuk-blue", "#lamjo-blue", "#mental-health-blue", "#lajohn-blue", "#twata-blue", "#sleuth-blue", "#fashboard-blue", "#spellbook-blue", "#clustr-blue"],
         "stack_excel" : ["#dexter-blue", "#creatures-blue", "#scory1-blue", "#gilmores-blue", "#scory2-blue", "#foodies-blue", "#schools-blue", "#bbuk-blue", "#lamjo-blue", "#mental-health-blue", "#lajohn-blue", "#twata-blue", "#sleuth-blue", "#fashboard-blue", "#spellbook-blue", "#clustr-blue"],
-        "stack_sql" : ["#bbuk-blue", "#dollhouse-blue"],
+        "stack_sql" : ["#bbuk-blue", "#dollhouse-blue", "#clustr-blue"],
         "stack_twitter" : ["#bbuk-blue", "#lamjo-blue", "#twata-blue", "#lajohn-blue"],
         "stack_spotify" : ["#scory1-blue", "#lamjo-blue"],
         "stack_youtube" : ["#scory1-blue", "#lamjo-blue"],
@@ -84,7 +84,7 @@ $(document).ready(function(){
         "stack_numpy" : ["#foodies-red"],
         "stack_pandas" : ["#dexter-red", "#creatures-red", "#scory1-red", "#gilmores-red", "#scory2-red", "#foodies-red", "#schools-red", "#bbuk-red", "#lamjo-red", "#mental-health-red", "#lajohn-red", "#twata-red", "#sleuth-red", "#fashboard-red", "#spellbook-red", "#clustr-red"],
         "stack_excel" : ["#dexter-red", "#creatures-red", "#scory1-red", "#gilmores-red", "#scory2-red", "#foodies-red", "#schools-red", "#bbuk-red", "#lamjo-red", "#mental-health-red", "#lajohn-red", "#twata-red", "#sleuth-red", "#fashboard-red", "#spellbook-red", "#clustr-red"],
-        "stack_sql" : ["#bbuk-red", "#dollhouse-red"],
+        "stack_sql" : ["#bbuk-red", "#dollhouse-red", "#clustr-red"],
         "stack_twitter" : ["#bbuk-red", "#lamjo-red", "#twata-red", "#lajohn-red"],
         "stack_spotify" : ["#scory1-red", "#lamjo-red"],
         "stack_youtube" : ["#scory1-red", "#lamjo-red"],
