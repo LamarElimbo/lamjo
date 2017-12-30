@@ -25,25 +25,25 @@ requiredInfo=[]
 @app.route('/landing')
 def landing():
     return render_template('landing_template/landing.html', 
-                           css_source='../static/landing_static/app.css')
+                           css_source='../static/landing_static/app_v1.css')
 
 @app.route('/home')
 def home():
     return render_template('home_template/home.html', 
-                           css_source='../static/home_static/app.css', 
+                           css_source='../static/home_static/app_v1.css', 
                            activeTab='home')
 
 @app.route('/home2')
 def home2():
     return render_template('home2_template/home.html', 
-                           css_source='../static/home2_static/app.css', 
+                           css_source='../static/home2_static/app_v1.css', 
                            activeTab='home')
 
 #Site Sleuth App
 @app.route('/site_sleuth_search')
 def site_sleuth_search():
     return render_template('site_sleuth_templates/search.html', 
-                           css_source='../static/site_sleuth_static/app.css', 
+                           css_source='../static/site_sleuth_static/app_v1.css', 
                            activeTab='site_sleuth')
 
 @app.route('/site_sleuth_result', methods=['POST'])
@@ -53,27 +53,27 @@ def site_sleuth_result():
         reqInfo = getResults.run(websites)
         requiredInfo.append(reqInfo)
         return render_template('site_sleuth_templates/result.html', 
-                           css_source='../static/site_sleuth_static/app.css', 
+                           css_source='../static/site_sleuth_static/app_v1.css', 
                            activeTab='site_sleuth',
                            requiredInfo=reqInfo)        
     except urllib.error.HTTPError:
         return render_template('site_sleuth_templates/error.html', 
-                           css_source='../static/site_sleuth_static/app.css', 
+                           css_source='../static/site_sleuth_static/app_v1.css', 
                            activeTab='site_sleuth')
     except urllib.error.URLError:
         return render_template('site_sleuth_templates/search.html', 
-                           css_source='../static/site_sleuth_static/app.css', 
+                           css_source='../static/site_sleuth_static/app_v1.css', 
                            activeTab='site_sleuth')
     except UnicodeDecodeError:
         return render_template('site_sleuth_templates/error.html', 
-                           css_source='../static/site_sleuth_static/app.css', 
+                           css_source='../static/site_sleuth_static/app_v1.css', 
                            activeTab='site_sleuth')
 
 #Spellbook App
 @app.route('/spellbook_search')
 def spellbook_search():
     return render_template('/spellbook_templates/search.html', 
-                           css_source='../static/spellbook_static/app.css', 
+                           css_source='../static/spellbook_static/app_v1.css', 
                            activeTab='spellbook')
 
 @app.route('/spellbook_result', methods=['POST'])
@@ -82,14 +82,14 @@ def spellbook_result():
     resultSpells = spellGetter.search(inputDesire)
     return render_template('/spellbook_templates/searchResultSpellbook.html', 
                            spellInfo=resultSpells, 
-                           css_source='../static/spellbook_static/app.css', 
+                           css_source='../static/spellbook_static/app_v1.css', 
                            activeTab='spellbook')
 
 #Scory Story App 1.0
 @app.route('/scory_story_v1')
 def scory_story_v1_search():
     return render_template('/scory_story_v1_templates/searchScoryStoryV1.html', 
-                           css_source='../static/scory_story_v1_static/app.css',  
+                           css_source='../static/scory_story_v1_static/app_v1.css',  
                            activeTab='scory_story_v1')
 
 @app.route('/scory_story_v1_result', methods=['POST'])
@@ -99,14 +99,14 @@ def scory_story_v1_result():
     
     return render_template('/scory_story_v1_templates/resultScoryStoryV1.html',
                            sent=story, genre=classification, musicGenre=songGenre, youtube_id=vidId, 
-                           css_source='../static/scory_story_v1_static/app.css',  
+                           css_source='../static/scory_story_v1_static/app_v1.css',  
                            activeTab='scory_story_v1')
 
 #Scory Story App 2.0
 @app.route('/scory_story_v2')
 def scory_story_v2_search():
     return render_template('/scory_story_v2_templates/searchScoryStoryV2.html', 
-                           css_source='../static/scory_story_v2_static/app.css',   
+                           css_source='../static/scory_story_v2_static/app_v1.css',   
                            activeTab='scory_story_v2')
 
 @app.route('/scory_story_v2_result', methods=['POST'])
@@ -115,7 +115,7 @@ def scory_story_v2_result():
     storyParagraphs, combinedGenreList = mainStoryScory_v2.v2_runProgram(story)
     return render_template('/scory_story_v2_templates/resultScoryStoryV2.html',
                            paragraphs=storyParagraphs, combinedGenres=combinedGenreList,
-                           css_source='../static/scory_story_v2_static/app.css',   
+                           css_source='../static/scory_story_v2_static/app_v1.css',   
                            repoLink='https://github.com/lamar133/scoryStory2.0',
                            activeTab='scory_story_v2')
 
@@ -128,7 +128,7 @@ def graphIt():
 
     currentDate = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
     return render_template('/twata_templates/graph.html', 
-                           css_source='static/twata_static/app.css',
+                           css_source='static/twata_static/app_v1.css',
                            date=currentDate, 
                            neg_latestScores_ordered=negScores, 
                            neg_graphHeight=negHeight,
