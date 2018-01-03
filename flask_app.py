@@ -142,27 +142,15 @@ if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
     
 
-# Info to include:
-#   - Status: MOST WANTED
-#   - Name
-#   - Age
-#   - Sex
-#   - D.O.B.
-#   - Country of Origin
-#   - Last Known Location
-#   - Languages
-#   - Nationality
-#   - Marital Status
-#   - Code Name
-#   - Appearance:
-#       - Eye Colour
-#       - Hair Colour
-#       - Height
-#       - Weight
-#   - Online Profiles
-#   - Technologies Used
-#   - Volunteering
-#   - Education
-#   - Contact Info
-#   - Myers Briggs Assessment
-#   - Special Skills
+# lamjo
+## en script
+## fr script
+## it script
+## ge script
+
+
+# lajohn
+## en script
+## fr script
+## it script
+## ge script
