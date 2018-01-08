@@ -1,0 +1,121 @@
+{% extends "_skeleton_template.html" %}
+{% block title %}Lamar's Web Apps - Twata{% endblock %}
+{% block content %}
+    <div class="row justify-content-between">
+        <div class="col-xs-11 col-md-12">
+            <h4 class="page-header">{{searchedShow}}</h4>
+            <h4 class="page-header">{{searchedAward}}</h4>
+        </div>
+    </div>
+
+<br><br><br><br>
+    <div class="row justify-content-between">
+        <div class="col-xs-11 col-md-5 maintext">
+            <center><h3 class="text-title">Positive Tweet Count</h3></center>
+            <div class="graph" id="pos_graph">
+
+                <script>
+                    var dataArray = {{pos_latestScores_ordered}}; var graphHeight = {{pos_graphHeight}}; 
+                    var svg = d3.select("#pos_graph").append("svg")
+                                  .attr("height","400px")
+                                  .attr("width","100%")
+                                  .attr("z-index","70")
+                                  .attr("position", "relative")
+                                  .attr("top", "0")
+                                  .attr("left", "0");
+
+                        svg.selectAll("rect")
+                            .data(dataArray)
+                            .enter().append("rect")
+                                  .attr("class", "bar")
+                                  .attr("height", function(d, i) {return (400*d/graphHeight)})
+                                  .attr("width","{{100/x_cats | count - 10 }}%")
+                                  .attr("z-index","80")
+                                  .attr("x", function(d, i) {return 100/{{x_cats | count}} * i + 5 + "%"})
+                                  .attr("y", function(d, i) {return 400 - (400*d/graphHeight)});
+
+                        svg.selectAll("text")
+                            .data(dataArray)
+                            .enter().append("text")
+                            .text(function(d) {return d})
+                                   .attr("class", "text")
+                                   .attr("z-index","90")
+                                   .attr("x", function(d, i) {return 100/{{x_cats | count}} * i + 7 + "%"})
+                                   .attr("y", function(d, i) {return 420 - (400*d/graphHeight)});
+                </script>
+                <div id='xLabelArea'>
+                    {% set num_cats = x_cats | count %}
+                    {% set cat_num = 0 %}
+                    {% for category in x_cats %}
+                        <div class='xLabel' style='left:{{100/num_cats * cat_num}}%; width:{{100/num_cats}}%;'><center><strong>{{category}}</strong></center></div>
+                        {% set cat_num = cat_num + 1 %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-11 col-md-5 col-md-offset-1 maintext">
+            <center><h3 class="text-title">Negative Tweet Count</h3></center>
+            <div class="graph" id="neg_graph">
+                <script>
+                    var dataArray = {{neg_latestScores_ordered}}; var graphHeight = {{neg_graphHeight}}; 
+                    var svg = d3.select("#neg_graph").append("svg")
+                                  .attr("height","400px")
+                                  .attr("width","100%")
+                                  .attr("z-index","70")
+                                  .attr("position", "fixed")
+                                  .attr("top", "0")
+                                  .attr("left", "0");
+
+                        svg.selectAll("rect")
+                            .data(dataArray)
+                            .enter().append("rect")
+                                  .attr("class", "bar")
+                                  .attr("height", function(d, i) {return (400*d/graphHeight)})
+                                  .attr("width","{{100/num_cats - 10 }}%")
+                                  .attr("z-index","80")
+                                  .attr("x", function(d, i) {return 100/{{x_cats | count}} * i + 5 + "%"})
+                                  .attr("y", function(d, i) {return 400 - (400*d/graphHeight)});
+
+                        svg.selectAll("text")
+                            .data(dataArray)
+                            .enter().append("text")
+                            .text(function(d) {return d})
+                                   .attr("class", "text")
+                                   .attr("z-index","90")
+                                   .attr("x", function(d, i) {return 100/{{x_cats | count}} * i + 7 + "%"})
+                                   .attr("y", function(d, i) {return 420 - (400*d/graphHeight)});
+                </script>
+                <div id='xLabelArea'>
+                    {% set num_cats = x_cats | count %}
+                    {% set cat_num = 0 %}
+                    {% for category in x_cats %}
+                        <div class='xLabel' style='left:{{100/num_cats * cat_num}}%; width:{{100/num_cats}}%;'><center><strong>{{category}}</strong></center></div>
+                        {% set cat_num = cat_num + 1 %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+<br><br><br><br><br><br><br>
+    <div class="row justify-content-between">
+        <div class="col-xs-11 col-md-12 maintext">
+          <center><h3 class="text-title">Tweets</h3></center>
+            <div class="graph" id="tweet-area">
+                <ul>
+                    {% for tweet in tweets %}
+                        <li>{{ tweets }}</li>
+                      {% endfor %}
+                  </ul>
+                <ul>
+                    {% for tweet in Tweets %}
+                        {% if tweet.sentiment == 'neg' %}
+                            <li style="color:#a82d42;"><b>{{ tweet.nominee }}: </b>{{ tweet.tweet }}</li>
+                        {% else %}
+                            <li style="color:#0c520a;"><b>{{ tweet.nominee }}: </b>{{ tweet.tweet }}</li>
+                        {% endif %}
+                    {% endfor %}
+                  </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import sys
 import urllib
+import json
 
 sys.path.insert(0, './site_sleuth/')
 import getResults
@@ -17,6 +18,11 @@ import mainStoryScory_v2
 sys.path.insert(0, './twata')
 import getGraphScript
 import datetime
+
+sys.path.insert(0, './sent_pop')
+import getSentPopScores
+import tweetCollector
+from models import AwardShows, Tweets
 
 app = Flask(__name__)
 requiredInfo=[]
@@ -119,38 +125,66 @@ def scory_story_v2_result():
                            repoLink='https://github.com/lamar133/scoryStory2.0',
                            activeTab='scory_story_v2')
 
-#Twata
-@app.route('/twata')
-def graphIt():
-    negScores, negHeight = getGraphScript.getNegScript()
-    posScores, posHeight = getGraphScript.getPosScript()
-    x_keys = getGraphScript.getXCats()
+#Sent Pop
+@app.route('/sent_pop')
+def sent_pop_home():
+    awardShows = AwardShows.objects
+    
+    if Tweets.objects != None:
+        Tweets.drop_collection()
+        
+    return render_template('/sent_pop_templates/home.html', 
+                           css_source='static/sent_pop_static/home.css',
+                           AwardShows=awardShows
+                          )
+ 
+    
+@app.route('/sent_pop_graph', methods=['POST'])
+def sent_pop_graph():
+    full_selection = request.form['award']
+    show_selection = full_selection.split(':')[0]
+    award_selection = full_selection.split(':')[1]
 
-    currentDate = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
-    return render_template('/twata_templates/graph.html', 
-                           css_source='static/twata_static/app_v1.css',
-                           date=currentDate, 
+    award_selection_query = AwardShows.objects(name = show_selection).fields(awards=1).to_json()
+    award_selection_query = json.loads(award_selection_query)
+    
+    award_selection_nominees = []
+    for award in award_selection_query[0]["awards"]:
+        if award['award_type'] == award_selection:
+            award_selection_nominees.extend(award['nominees'])
+        
+    tweetCollector.collectTweets(award_selection_nominees)
+    
+    negScores, negHeight = getSentPopScores.get_neg_values(sorted(award_selection_nominees))
+    posScores, posHeight = getSentPopScores.get_pos_values(sorted(award_selection_nominees))
+    
+    tweets = Tweets.objects
+    
+    return render_template('/sent_pop_templates/graph.html', 
+                           css_source='static/sent_pop_static/app.css',
+                           searchedShow=show_selection,
+                           searchedAward=award_selection,
                            neg_latestScores_ordered=negScores, 
                            neg_graphHeight=negHeight,
                            pos_latestScores_ordered=posScores, 
                            pos_graphHeight=posHeight,
-                           x_cats=x_keys
+                           x_cats=sorted(award_selection_nominees),
+                           Tweets=tweets
                           )
-
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
     
 
-# lamjo
-## en script
-## fr script
-## it script
-## ge script
+# lamjo hompage language vocals fun facts
+## en script: 
+## fr script: school
+## it script: fam origin
+## ge script: german soap + pippi longstocking
 
 
-# lajohn
-## en script
-## fr script
-## it script
-## ge script
+# lajohn hompage language vocals fun facts
+## en script:
+## fr script:
+## it script:
+## ge script: german rap

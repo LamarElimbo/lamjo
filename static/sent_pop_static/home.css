@@ -1,0 +1,215 @@
+html {
+    height: 100%;
+}
+
+.project {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+#header {
+    width: 100%;
+    background-color: #542e37;
+    z-index: 100;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+#header a {
+    font-family: 'Poiret One', cursive;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.bodystyle {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #0e221f; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#183a35, #0e221f 66.67%, #0e221f 67.23%, black); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#183a35, #0e221f 66.67%, #0e221f 67.23%, black); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#183a35, #0e221f 66.67%, #0e221f 67.23%, black); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#183a35, #0e221f 66.67%, #0e221f 67.23%, black); /* Standard syntax */
+}
+
+#crest {
+    width: 30%;
+    margin: auto;
+    display: block;
+    z-index: 0;
+    opacity: 0.25;
+}
+
+#property {
+    text-align: center;
+    font-family: 'Poiret One', cursive;
+    font-size:18px;
+    color: white;
+}
+
+#search-bar {
+    position: absolute;
+    width: 85%;
+    height: 40px;
+    border-radius: 0.07em;
+    border: .1em solid black;
+    background-color: black;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    z-index: 90;
+}
+
+#submitButton {
+    position: relative;
+    height: 40px;
+    left: 90%;
+    width: 45px;
+    border: .1em solid #542e37;
+    border-radius: 0.07em;
+    background-color: #542e37;
+    cursor: pointer;
+    padding-left: 13px;
+}
+
+#search-image {
+    height: 70%;
+}
+
+#site-input {
+    position: absolute;
+    top: 40%;
+}
+
+#site-input ::placeholder {
+    color: white;
+    text-align: center;
+}
+
+#selection-area {
+    position: absolute;
+    top: 10px;
+    margin: auto;
+    width: 88%;
+    height: 40px;
+    border: .1em solid black;
+    border-radius: 0.07em;
+    background-color: black;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    font-size: 20px;
+    letter-spacing: 5px;
+    z-index: 90;
+    overflow:scroll;
+}
+
+#selections {
+    width: 88%;
+    padding: 3%;
+    border: .1em solid black;
+    border-radius: 0.07em;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    overflow: scroll;
+}
+
+.sample-button {
+    background-color: #6B582D;
+    width: 100%;
+    border-radius: 0.5em;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#profile-card {
+    margin-top: 10%;
+    background-color: #6B582D;
+    border: 5px solid #6B582D;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    z-index: 90;
+}
+
+#logo img{
+    position: relative;
+    top: 50px;
+    width:120px;
+    border: 3px solid black;
+}
+
+#title {
+    position: absolute;
+    text-align: right;
+    right: 30px;
+    top: 0px;
+}
+
+#description {
+    position: relative;
+    top: 60px;
+}
+
+#socials {
+    position: relative;
+    top: 20px;
+}
+
+.socials {
+    width: 30px;
+    margin: 3px;
+}
+
+#keywords {
+    position: relative;
+    top: 60px;
+}
+
+#name {
+    position: relative;
+    top: 60px;
+    width: 100%;
+}
+
+#adminPic {
+    position: absolute;
+    right: 0px;
+    top: 90px;
+    width:120px;
+    height:120px;
+}
+
+#address {
+    position: relative;
+    top: 70px;
+}
+
+#contact {
+    position: relative;
+    top: 70px;
+    padding-bottom: 70px;
+}
+
+#timezone {
+    position: relative;
+    top: 70px;
+}
+
+#bottom-buffer {
+    position: absolute;
+    bottom: -80%;
+    height: 80%;
+    width: 110%;
+    background-color: black;
+    z-index: 0;
+}
+
+#app-info {
+    background-color: dimgrey;
+    font-family: 'Poiret One', cursive;
+}

@@ -1,0 +1,57 @@
+{% extends "_skeleton_template.html" %}
+{% block title %}Lamar's Web Apps - SentPop{% endblock %}
+{% block content %}
+<div class="info-pulse"></div>
+
+<div class="container">
+    <br>
+    <div id='search-section'>
+        <img src="../../static/sent_pop_static/crest.png" id='crest'>
+
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-md-8" id="site-input">
+                <br>
+                <input type='textarea' id='search-bar' form='textform' name='award'>
+                <form action="{{ url_for('sent_pop_graph')}}" id='textform' method='post'>
+                    <button type="submit" id='submitButton' form='textform'><img src="../../static/sent_pop_static/search.png" id='search-image'></button>
+                </form>
+                
+                <div class="dropdown">
+                  <button id='selection-area' class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select an award
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu" id='selections'>
+                    {% for show in AwardShows %}
+                        <li>{{ show.name }}
+                            <ul>
+                                {% for award in show.awards %}
+                                    <li class="search-option" title="{{ show.name}}:{{ award.award_type }}">{{ award.award_type }}</li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                      {% endfor %}
+                  </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xs-12 col-md-8 info-panel" id="app-info">
+                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                <p><b>Say hello to SentPop!</b></p>
+                <p>**Special Edition: Award Show Season**</p>
+                <br>
+                <p>SentPop is your inside scoop to what Twitter's gen pop is thinking.  It's a program that applies sentiment analysis to tweets about current pop culture topics.</p>
+                <p>Feel free to give it a go but be just a little bit patient because SentPop is doing a lot of analyses in the background.</p>
+            </div>
+        </div>
+        <script>
+        $(document).ready(function(){
+            $(".info-pulse").click(function(){
+                $(".info-panel").show(500);
+            });
+        });
+        </script>
+        <script src="../../static/sent_pop_static/sample_website.js"></script>
+    </div>
+</div>
+{% endblock %}
