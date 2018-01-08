@@ -18,16 +18,7 @@
                   <button id='selection-area' class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select an award
                   <span class="caret"></span></button>
                   <ul class="dropdown-menu" id='selections'>
-                    {% for show in AwardShows %}
-                        <li>{{ show.name }}
-                            <ul>
-                                {% for award in show.awards %}
-                                    <li class="search-option" title="{{ show.name}}:{{ award.award_type }}">{{ award.award_type }}</li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                        <li class="divider"></li>
-                      {% endfor %}
+                    <li>Not currently supported on Python Anywhere</li>
                   </ul>
                 </div>
             </div>

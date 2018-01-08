@@ -19,11 +19,6 @@ sys.path.insert(0, './twata')
 import getGraphScript
 import datetime
 
-sys.path.insert(0, './sent_pop')
-import getSentPopScores
-import tweetCollector
-from models import AwardShows, Tweets
-
 app = Flask(__name__)
 requiredInfo=[]
 
@@ -128,48 +123,17 @@ def scory_story_v2_result():
 #Sent Pop
 @app.route('/sent_pop')
 def sent_pop_home():
-    awardShows = AwardShows.objects
-    
-    if Tweets.objects != None:
-        Tweets.drop_collection()
-        
+  
     return render_template('/sent_pop_templates/home.html', 
                            css_source='static/sent_pop_static/home.css',
-                           AwardShows=awardShows
                           )
  
     
 @app.route('/sent_pop_graph', methods=['POST'])
 def sent_pop_graph():
-    full_selection = request.form['award']
-    show_selection = full_selection.split(':')[0]
-    award_selection = full_selection.split(':')[1]
-
-    award_selection_query = AwardShows.objects(name = show_selection).fields(awards=1).to_json()
-    award_selection_query = json.loads(award_selection_query)
-    
-    award_selection_nominees = []
-    for award in award_selection_query[0]["awards"]:
-        if award['award_type'] == award_selection:
-            award_selection_nominees.extend(award['nominees'])
-        
-    tweetCollector.collectTweets(award_selection_nominees)
-    
-    negScores, negHeight = getSentPopScores.get_neg_values(sorted(award_selection_nominees))
-    posScores, posHeight = getSentPopScores.get_pos_values(sorted(award_selection_nominees))
-    
-    tweets = Tweets.objects
     
     return render_template('/sent_pop_templates/graph.html', 
-                           css_source='static/sent_pop_static/app.css',
-                           searchedShow=show_selection,
-                           searchedAward=award_selection,
-                           neg_latestScores_ordered=negScores, 
-                           neg_graphHeight=negHeight,
-                           pos_latestScores_ordered=posScores, 
-                           pos_graphHeight=posHeight,
-                           x_cats=sorted(award_selection_nominees),
-                           Tweets=tweets
+                           css_source='static/sent_pop_static/app.css'
                           )
 
 if __name__ == '__main__':
