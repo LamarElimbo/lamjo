@@ -12,9 +12,7 @@
             <div class="col-xs-12 col-md-8" id="site-input">
                 <br>
                 <input type='textarea' id='search-bar' form='textform' name='award'>
-                <form action="{{ url_for('sent_pop_graph')}}" id='textform' method='post'>
-                    <button type="submit" id='submitButton' form='textform'><img src="../../static/sent_pop_static/search.png" id='search-image'></button>
-                </form>
+                <div id='submitButton'><img src="../../static/sent_pop_static/search.png" id='search-image' data-toggle="tooltip" data-placement="right" title="Python Anywhere does not support MongoDB, the backend database for this app. Adaptation for relational database is soon to come."></div>
                 
                 <div class="dropdown">
                   <button id='selection-area' class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select an award
@@ -42,6 +40,7 @@
                 <br>
                 <p>SentPop is your inside scoop to what Twitter's gen pop is thinking.  It's a program that applies sentiment analysis to tweets about current pop culture topics.</p>
                 <p>Feel free to give it a go but be just a little bit patient because SentPop is doing a lot of analyses in the background.</p>
+                <h3 style="color:red;"><b>***Python Anywhere does not support MongoDB, the backend database for this app. Adaptation for relational database is soon to come.***</b></h3>
             </div>
         </div>
         <script>

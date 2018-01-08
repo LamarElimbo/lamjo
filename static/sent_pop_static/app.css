@@ -37,6 +37,11 @@ h3 {
     font-family: 'Poiret One', cursive;
 }
 
+.tooltip-inner, .arrow {
+    color: white !important;
+    background-color: rgba(173, 22, 77, .85) !important;
+}
+
 .bodystyle {
     height: 100%;
     background-image: -webkit-repeating-radial-gradient(center center, rgba(12,82,10,.9), rgba(0,0,0,.2) 1px, transparent 0.1px, transparent 100%);
