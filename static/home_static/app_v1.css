@@ -265,6 +265,7 @@ body {
 .tooltip-inner, .arrow {
     color: white !important;
     background-color: rgba(173, 22, 77, .85) !important;
+    min-width: 500px;
 }
 
 #icon-current-location {
