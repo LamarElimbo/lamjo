@@ -262,10 +262,10 @@ body {
     100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
 }
 
-.tooltip-inner, .arrow {
+.tooltip-inner {
     color: white !important;
     background-color: rgba(173, 22, 77, .85) !important;
-    min-width: 500px;
+    min-width: 320px;
 }
 
 #icon-current-location {
