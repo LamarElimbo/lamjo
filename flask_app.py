@@ -31,7 +31,7 @@ def landing():
 @app.route('/home')
 def home():
     return render_template('home_template/home.html', 
-                           css_source='../static/home_static/app_v1.css', 
+                           css_source='../static/home_static/app_v2.css', 
                            activeTab='home')
 
 @app.route('/home2')
