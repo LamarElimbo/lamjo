@@ -1,3 +1,9 @@
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
 body {
     background: url('grid.png');
 }
@@ -9,6 +15,17 @@ body {
 
 #home {
     width: 100%;
+}
+
+.notify {
+    position: absolute;
+    border: 3px solid lightblue;
+    -webkit-border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    -webkit-animation: pulsate 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0;    
 }
 
 .starter-left {
@@ -256,12 +273,6 @@ body {
     left: 24%;
 }
 
-@-webkit-keyframes pulsate {
-    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
-    50% {opacity: 1.0;}
-    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
-}
-
 .tooltip-inner {
     color: white !important;
     background-color: rgba(173, 22, 77, .85) !important;
@@ -425,6 +436,11 @@ body {
     left: 46%;
     width: 27%;
     background-color: rgba(255,118,54,0.3);
+}
+
+#grades {
+    top: 27%;
+    left: 70%;
 }
 
 #honour-roll {
@@ -703,6 +719,11 @@ body {
     height: 630px;
     display: flex;
     justify-content:space-between;
+}
+
+#techsplenation {
+    top: 0px;
+    left: 63%;
 }
 
 #stack-title {
